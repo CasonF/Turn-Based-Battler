@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://b6604iy4wwiub"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_1ff6e"]
+
+[resource]
+script = ExtResource("1_1ff6e")
+action_name = "Fireball"
+priority = 0
+power = 80
+ap_cost = 2
+action_type = 1
+attack_type = 5

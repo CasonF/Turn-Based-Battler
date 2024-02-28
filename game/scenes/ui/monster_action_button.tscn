@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn7ur1fgyw8xw"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_manager/monster_action_button.gd" id="1_mipe6"]
+
+[node name="MonsterActionButton" type="Button"]
+anchors_preset = -1
+anchor_right = 0.137
+anchor_bottom = 0.162
+offset_right = 0.175995
+offset_bottom = 0.0240021
+text = "Text"
+script = ExtResource("1_mipe6")

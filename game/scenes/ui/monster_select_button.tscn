@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccn0cva6xs68m"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/monster_select_button.gd" id="1_jni6u"]
+
+[node name="MonsterSelectButton" type="Button"]
+offset_right = 224.0
+offset_bottom = 32.0
+text = "Test text"
+script = ExtResource("1_jni6u")

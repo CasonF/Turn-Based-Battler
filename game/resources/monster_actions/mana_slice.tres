@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://diuic0vluwaiy"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_w5lgp"]
+
+[resource]
+script = ExtResource("1_w5lgp")
+action_name = "Mana Slice"
+priority = 0
+power = 50
+ap_cost = 0
+action_type = 0
+attack_type = 4
+action_effect = 6

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://uy4wowxf6g7o"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_6bo6n"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="2_5irfy"]
+[ext_resource type="Texture2D" uid="uid://bi0n5dtahkm8r" path="res://game/assets/Sprites (Battlers) 2x/37_minion_01_xx.png" id="2_e74vb"]
+[ext_resource type="Resource" uid="uid://0ei2y8lw1v2q" path="res://game/resources/monster_actions/withdraw.tres" id="2_wv5nn"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="3_varp8"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="4_e6mk1"]
+
+[resource]
+script = ExtResource("1_6bo6n")
+monster_name = "Nautilus"
+is_monster_leader = false
+sprite = ExtResource("2_e74vb")
+hp = 32
+atk = 28
+def = 102
+matk = 78
+mdef = 72
+spd = 78
+xp_yield = 40
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_5irfy"), ExtResource("2_wv5nn"), ExtResource("3_varp8"), ExtResource("4_e6mk1")])
+y_offset = 0.0

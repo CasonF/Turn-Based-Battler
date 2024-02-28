@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://cjgvr3jdqoaif"]
+
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="1_dwtg0"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_mmtor"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="2_r6nim"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="3_hqo2o"]
+[ext_resource type="Texture2D" uid="uid://btitxc0bcrka2" path="res://game/assets/Sprites (Battlers) 2x/61_minion_2_xx.png" id="5_t4hy4"]
+
+[resource]
+script = ExtResource("1_mmtor")
+monster_name = "Arcane Hammer"
+is_monster_leader = false
+sprite = ExtResource("5_t4hy4")
+hp = 50
+atk = 105
+def = 70
+matk = 40
+mdef = 70
+spd = 40
+xp_yield = 81
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_dwtg0"), ExtResource("2_r6nim"), ExtResource("3_hqo2o")])
+y_offset = 0.0

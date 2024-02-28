@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://dld0lk3njb3ay"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_2vwj1"]
+[ext_resource type="Resource" uid="uid://q8w4yxe4nb0k" path="res://game/resources/monster_actions/wide_slash.tres" id="2_ie8fc"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="2_k3csg"]
+[ext_resource type="Texture2D" uid="uid://5gdcpyjn1el" path="res://game/assets/Sprites (Battlers) 2x/20_minion_04_xx.png" id="2_temlu"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="3_pwjny"]
+
+[resource]
+script = ExtResource("1_2vwj1")
+monster_name = "Axe Wolf"
+is_monster_leader = false
+sprite = ExtResource("2_temlu")
+hp = 40
+atk = 105
+def = 45
+matk = 30
+mdef = 45
+spd = 87
+xp_yield = 47
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_k3csg"), ExtResource("2_ie8fc"), ExtResource("3_pwjny")])
+y_offset = 0.0

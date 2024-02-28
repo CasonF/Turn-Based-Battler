@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://ca45lmst5pmkj"]
+
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="1_0a6rn"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_pu73y"]
+[ext_resource type="Resource" uid="uid://diuic0vluwaiy" path="res://game/resources/monster_actions/mana_slice.tres" id="2_23xv5"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="3_a03tm"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="4_brdqk"]
+[ext_resource type="Texture2D" uid="uid://b2csffdrm4edk" path="res://game/assets/Sprites (Battlers) 2x/61_minion_1_xx.png" id="6_gq77g"]
+
+[resource]
+script = ExtResource("1_pu73y")
+monster_name = "Arcane Blade"
+is_monster_leader = false
+sprite = ExtResource("6_gq77g")
+hp = 50
+atk = 120
+def = 50
+matk = 60
+mdef = 50
+spd = 50
+xp_yield = 77
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_0a6rn"), ExtResource("2_23xv5"), ExtResource("3_a03tm"), ExtResource("4_brdqk")])
+y_offset = 0.0

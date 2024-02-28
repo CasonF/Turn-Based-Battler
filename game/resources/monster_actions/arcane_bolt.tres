@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://cq6s5ae2qc6r7"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_j6leg"]
+
+[resource]
+script = ExtResource("1_j6leg")
+action_name = "Arcane Bolt"
+power = 40
+ap_cost = 0
+action_type = 1
+attack_type = 4

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://x8ge5px0n4uu"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_l8h4o"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="1_yblnk"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="2_4v7eg"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="3_4app1"]
+[ext_resource type="Texture2D" uid="uid://dsmkbifmq2msr" path="res://game/assets/Sprites (Battlers) 2x/18_boss_xx.png" id="5_71cj0"]
+
+[resource]
+script = ExtResource("1_l8h4o")
+monster_name = "Angryfin"
+is_monster_leader = true
+sprite = ExtResource("5_71cj0")
+hp = 90
+atk = 105
+def = 70
+matk = 100
+mdef = 70
+spd = 80
+xp_yield = 168
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_yblnk"), ExtResource("2_4v7eg"), ExtResource("3_4app1")])
+y_offset = 0.0

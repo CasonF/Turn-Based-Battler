@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://dblkvel15jcvv"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_7fij2"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="1_drm4t"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="2_ngfym"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="3_ng3bl"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="4_k4412"]
+[ext_resource type="Texture2D" uid="uid://bpymnt0uvgba8" path="res://game/assets/Sprites (Battlers) 2x/53_boss_xxx.png" id="5_voduv"]
+
+[resource]
+script = ExtResource("1_7fij2")
+monster_name = "Senshi Frog"
+is_monster_leader = true
+sprite = ExtResource("5_voduv")
+hp = 126
+atk = 90
+def = 67
+matk = 67
+mdef = 90
+spd = 75
+xp_yield = 151
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_drm4t"), ExtResource("2_ngfym"), ExtResource("3_ng3bl"), ExtResource("4_k4412")])
+y_offset = 0.0

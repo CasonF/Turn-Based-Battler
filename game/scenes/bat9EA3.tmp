@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://duqtnl2mdxfn3"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/battle_setup.gd" id="1_lljos"]
+[ext_resource type="PackedScene" uid="uid://dusao4rbugdj3" path="res://game/scenes/ui/stat_display.tscn" id="2_1hfhx"]
+
+[node name="BattleSetup" type="Node"]
+script = ExtResource("1_lljos")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = -0.499
+anchor_top = -0.5
+anchor_right = -0.276
+anchor_bottom = 0.5
+offset_left = -1.15198
+offset_right = -0.0479736
+
+[node name="MonsterScrollLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.05176e-05
+offset_bottom = -606.0
+theme_override_font_sizes/font_size = 24
+text = "Select a Monster"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.996
+anchor_bottom = 1.0
+offset_top = 48.0
+offset_right = 0.0319824
+offset_bottom = -324.0
+horizontal_scroll_mode = 0
+
+[node name="MonsterList" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="AddToPlayerParty" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 329.0
+offset_right = -3.05176e-05
+offset_bottom = -268.0
+theme_override_font_sizes/font_size = 20
+text = "Add to Party"
+
+[node name="RemoveFromPlayerParty" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 597.0
+offset_right = -3.05176e-05
+theme_override_colors/font_color = Color(0.854902, 0.356863, 0.223529, 1)
+theme_override_font_sizes/font_size = 20
+text = "Remove from Party"
+
+[node name="PlayerParty" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 382.0
+offset_right = -3.05176e-05
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MonsterStatsPanel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = -0.499
+anchor_top = -0.5
+anchor_right = -0.276
+anchor_bottom = 0.5
+offset_left = 826.848
+offset_right = 893.952
+
+[node name="StatHex" parent="MonsterStatsPanel" instance=ExtResource("2_1hfhx")]
+layout_mode = 1
+offset_left = 59.24
+offset_top = 209.952
+offset_right = 479.24
+offset_bottom = 629.952
+scale = Vector2(0.77, 0.77)
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="MonsterStatsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.996
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 367.0
+offset_right = 1.29599
+offset_bottom = -53.0
+horizontal_scroll_mode = 0
+
+[node name="EnemyTeamList" type="VBoxContainer" parent="MonsterStatsPanel/ScrollContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="EnemyScrollLabel" type="Label" parent="MonsterStatsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 324.0
+offset_bottom = -282.0
+theme_override_font_sizes/font_size = 24
+text = "Select Enemy Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartCombat" type="Button" parent="MonsterStatsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 597.0
+theme_override_colors/font_color = Color(0.972549, 0.756863, 0.219608, 1)
+theme_override_font_sizes/font_size = 20
+text = "Start Combat"
+
+[node name="MonsterSprite" type="Sprite2D" parent="."]
+position = Vector2(-33, 0)
+scale = Vector2(3, 3)
+
+[connection signal="pressed" from="Panel/AddToPlayerParty" to="." method="_add_monster_to_player_party"]
+[connection signal="pressed" from="Panel/RemoveFromPlayerParty" to="." method="_remove_monster_from_player_party"]

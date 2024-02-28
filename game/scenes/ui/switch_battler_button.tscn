@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1kdi00hgo1lq"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_manager/switch_battler_button.gd" id="1_g3skn"]
+
+[node name="SwitchBattlerButton" type="Button"]
+anchors_preset = -1
+anchor_right = 0.147
+anchor_bottom = 0.139
+offset_right = -0.343994
+offset_bottom = -0.0720062
+text = "Text"
+script = ExtResource("1_g3skn")
+high_hp_color = Color(0, 0.619608, 0, 1)
+med_hp_color = Color(0.87451, 0.635294, 0, 1)
+low_hp_color = Color(0.801263, 4.23551e-06, 2.88785e-07, 1)
+
+[node name="DisplayHP" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.933
+anchor_right = 1.0
+anchor_bottom = 1.056
+offset_top = 0.0299988
+offset_bottom = -0.0400009
+grow_horizontal = 2
+grow_vertical = 2
+value = 50.0
+show_percentage = false

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c5hpf63c3ch5k"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_boxu4"]
+
+[resource]
+script = ExtResource("1_boxu4")
+action_name = "Bite"
+power = 40
+ap_cost = 0
+action_type = 0
+attack_type = 3

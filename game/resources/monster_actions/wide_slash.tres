@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://q8w4yxe4nb0k"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_x5lr1"]
+
+[resource]
+script = ExtResource("1_x5lr1")
+action_name = "Wide Slash"
+priority = 0
+power = 60
+ap_cost = 0
+action_type = 0
+attack_type = 1

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://dpajq8vxdstxq"]
+
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="1_1cey1"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_3j0yk"]
+[ext_resource type="Texture2D" uid="uid://yywi2mwjxtuw" path="res://game/assets/Sprites (Battlers) 2x/47_minion_02_xx.png" id="2_14j7w"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_qomb5"]
+
+[resource]
+script = ExtResource("1_3j0yk")
+monster_name = "Stony Calfdrake"
+is_monster_leader = false
+sprite = ExtResource("2_14j7w")
+hp = 110
+atk = 70
+def = 80
+matk = 25
+mdef = 65
+spd = 15
+xp_yield = 43
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_1cey1"), ExtResource("2_qomb5")])
+y_offset = 0.0

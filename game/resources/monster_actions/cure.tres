@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bv21yyi0hmuvu"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_ccota"]
+
+[resource]
+script = ExtResource("1_ccota")
+action_name = "Cure"
+priority = 0
+power = 15
+ap_cost = 1
+action_type = 2
+attack_type = 12

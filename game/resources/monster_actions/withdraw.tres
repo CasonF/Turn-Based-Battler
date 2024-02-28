@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://0ei2y8lw1v2q"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_q8a4i"]
+
+[resource]
+script = ExtResource("1_q8a4i")
+action_name = "Withdraw"
+priority = 0
+power = 20
+ap_cost = 1
+action_type = 3
+attack_type = 13

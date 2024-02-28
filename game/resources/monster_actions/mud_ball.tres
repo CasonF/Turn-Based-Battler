@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://d0q0qdts71y16"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_lyw8p"]
+
+[resource]
+script = ExtResource("1_lyw8p")
+action_name = "Mud Ball"
+priority = 0
+power = 40
+ap_cost = 0
+action_type = 1
+attack_type = 9
+action_effect = 7

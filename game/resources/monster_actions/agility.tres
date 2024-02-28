@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://dqoe4km1xisqw"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_re2sn"]
+
+[resource]
+script = ExtResource("1_re2sn")
+action_name = "Agility"
+priority = 0
+power = 0
+ap_cost = 0
+action_type = 3
+attack_type = 0
+action_effect = 3

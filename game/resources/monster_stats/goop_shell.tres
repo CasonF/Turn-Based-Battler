@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://bvlsh0pwdsveu"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_4tccr"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_mnn7p"]
+[ext_resource type="Texture2D" uid="uid://cm3338kk2ogap" path="res://game/assets/Sprites (Battlers) 2x/37_minion_02_xx.png" id="2_bqv8i"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="2_pmljr"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="3_i3mah"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="4_01b0v"]
+
+[resource]
+script = ExtResource("1_4tccr")
+monster_name = "Goop Shell"
+is_monster_leader = false
+sprite = ExtResource("2_bqv8i")
+hp = 35
+atk = 50
+def = 90
+matk = 55
+mdef = 90
+spd = 15
+xp_yield = 33
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_mnn7p"), ExtResource("2_pmljr"), ExtResource("3_i3mah"), ExtResource("4_01b0v")])
+y_offset = 0.0

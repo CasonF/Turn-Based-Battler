@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://dj7an2cquynmd"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_d7olb"]
+
+[resource]
+script = ExtResource("1_d7olb")
+action_name = "Stab"
+priority = 0
+power = 45
+ap_cost = 0
+action_type = 0
+attack_type = 3
+action_effect = 5

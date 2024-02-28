@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://yt4wj0wdl2hh"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_5aaeb"]
+[ext_resource type="Texture2D" uid="uid://c466ssjmy5ejp" path="res://game/assets/Sprites (Battlers) 2x/37_minion_03_xx.png" id="2_3t020"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="2_rigbv"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_rwwfp"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="3_ro0fb"]
+
+[resource]
+script = ExtResource("1_5aaeb")
+monster_name = "Clamp Shell"
+is_monster_leader = false
+sprite = ExtResource("2_3t020")
+hp = 55
+atk = 70
+def = 100
+matk = 30
+mdef = 55
+spd = 25
+xp_yield = 38
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_rwwfp"), ExtResource("2_rigbv"), ExtResource("3_ro0fb")])
+y_offset = 0.0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://dfrrfxmx5dr81"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_aevem"]
+
+[resource]
+script = ExtResource("1_aevem")
+action_name = "Punch"
+power = 40
+ap_cost = 0
+action_type = 0
+attack_type = 2

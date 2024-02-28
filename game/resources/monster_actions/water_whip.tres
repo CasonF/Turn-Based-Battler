@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bs00iik120aq8"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_ylp6t"]
+
+[resource]
+script = ExtResource("1_ylp6t")
+action_name = "Water Whip"
+priority = 0
+power = 55
+ap_cost = 0
+action_type = 1
+attack_type = 6

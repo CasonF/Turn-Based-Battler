@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://bhhxgwchxd48c"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_mlcan"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_nn5hi"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="2_2ks7l"]
+[ext_resource type="Texture2D" uid="uid://c1ind3yj3axav" path="res://game/assets/Sprites (Battlers) 2x/20_minion_02_xx.png" id="2_3s4va"]
+
+[resource]
+script = ExtResource("1_mlcan")
+monster_name = "Stabby Corgi"
+is_monster_leader = false
+sprite = ExtResource("2_3s4va")
+hp = 54
+atk = 88
+def = 48
+matk = 34
+mdef = 38
+spd = 68
+xp_yield = 35
+growth_rate = 2
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_nn5hi"), ExtResource("2_2ks7l")])
+y_offset = 10.0

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://d2pex1n54ljpk"]
+
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="1_6xwri"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_lehci"]
+[ext_resource type="Resource" uid="uid://q8w4yxe4nb0k" path="res://game/resources/monster_actions/wide_slash.tres" id="2_engkx"]
+[ext_resource type="Resource" uid="uid://diuic0vluwaiy" path="res://game/resources/monster_actions/mana_slice.tres" id="3_eany5"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="4_840i2"]
+[ext_resource type="Texture2D" uid="uid://brpswn82dii36" path="res://game/assets/Sprites (Battlers) 2x/61_boss_xx.png" id="6_44qwc"]
+
+[resource]
+script = ExtResource("1_lehci")
+monster_name = "Excaliblade"
+is_monster_leader = true
+sprite = ExtResource("6_44qwc")
+hp = 70
+atk = 150
+def = 50
+matk = 125
+mdef = 50
+spd = 70
+xp_yield = 215
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_6xwri"), ExtResource("2_engkx"), ExtResource("3_eany5"), ExtResource("4_840i2")])
+y_offset = 0.0

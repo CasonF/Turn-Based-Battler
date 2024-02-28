@@ -1,0 +1,502 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnyh6voe0ynk5"]
+
+[ext_resource type="Script" path="res://game/scripts/battle_manager.gd" id="1_1kliy"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="2_4bdfl"]
+[ext_resource type="Resource" uid="uid://dfrrfxmx5dr81" path="res://game/resources/monster_actions/punch.tres" id="3_dxnn1"]
+[ext_resource type="AudioStream" uid="uid://7gpofuarsyfi" path="res://game/audio/music/AlexiAction/hero-80s-127027.mp3" id="4_8m6lj"]
+[ext_resource type="PackedScene" uid="uid://dt5k23t3pwsue" path="res://game/scenes/ui/battle_screen_background.tscn" id="5_pcwpu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wiy55"]
+bg_color = Color(0, 0, 0, 0.454902)
+
+[sub_resource type="SystemFont" id="SystemFont_kxj6p"]
+font_italic = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtrn2"]
+bg_color = Color(0, 0, 0, 0.454902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohh7n"]
+bg_color = Color(0.207843, 0.509804, 0.266667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l31e3"]
+bg_color = Color(0, 0, 0, 0.454902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft1tr"]
+bg_color = Color(0.203922, 0.678431, 0.67451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7m0r"]
+bg_color = Color(0, 0, 0, 0.454902)
+
+[node name="BattleManager" type="Node"]
+script = ExtResource("1_1kliy")
+high_hp_color = Color(0, 0.619608, 0, 1)
+med_hp_color = Color(0.87451, 0.635294, 0, 1)
+low_hp_color = Color(0.8, 0, 0, 1)
+test_attack = ExtResource("2_4bdfl")
+test_attack2 = ExtResource("3_dxnn1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BattlePanel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = 0.236
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 0.071991
+theme_override_styles/panel = SubResource("StyleBoxFlat_wiy55")
+
+[node name="CombatOptions" type="HBoxContainer" parent="BattlePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.24
+anchor_right = 0.999
+anchor_bottom = 0.749
+offset_top = -0.0400009
+offset_right = 0.151855
+offset_bottom = -0.0789948
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="FightButton" type="Button" parent="BattlePanel/CombatOptions" groups=["BaseCombatOptions"]]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kxj6p")
+theme_override_font_sizes/font_size = 28
+text = "FIGHT"
+
+[node name="SwitchButton" type="Button" parent="BattlePanel/CombatOptions" groups=["BaseCombatOptions"]]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kxj6p")
+theme_override_font_sizes/font_size = 28
+text = "SWITCH"
+
+[node name="PlayerHealthPanel" type="Panel" parent="BattlePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.234
+anchor_right = 0.238
+offset_top = 0.0140038
+offset_right = -0.175995
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtrn2")
+
+[node name="HealthBar" type="ProgressBar" parent="BattlePanel/PlayerHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_ohh7n")
+value = 50.0
+show_percentage = false
+
+[node name="ArmorPanel" type="Panel" parent="BattlePanel/PlayerHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = -0.175
+anchor_right = 0.938
+offset_left = 0.0119991
+offset_right = -0.0119934
+theme_override_styles/panel = SubResource("StyleBoxFlat_l31e3")
+
+[node name="ArmorBar" type="ProgressBar" parent="BattlePanel/PlayerHealthPanel/ArmorPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -1.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ft1tr")
+value = 50.0
+show_percentage = false
+
+[node name="PlayerMonster" type="Label" parent="BattlePanel/PlayerHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = -0.75
+anchor_right = 0.938
+anchor_bottom = -0.175
+offset_left = 0.0119991
+offset_right = -0.0119934
+text = "Name - Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerStatPanel" type="Panel" parent="BattlePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.247
+anchor_top = -0.234
+anchor_right = 0.332
+offset_left = -0.544006
+offset_top = 0.0140076
+offset_right = 0.53598
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7m0r")
+
+[node name="ATKStatStage" type="ProgressBar" parent="BattlePanel/PlayerStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 15.0
+offset_right = 117.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="ATKStage" type="Label" parent="BattlePanel/PlayerStatPanel/ATKStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "ATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DEFStatStage" type="ProgressBar" parent="BattlePanel/PlayerStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_right = 137.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="DEFStage" type="Label" parent="BattlePanel/PlayerStatPanel/DEFStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "DEF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MATKStatStage" type="ProgressBar" parent="BattlePanel/PlayerStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 55.0
+offset_right = 157.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="MATKStage" type="Label" parent="BattlePanel/PlayerStatPanel/MATKStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "MATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MDEFStatStage" type="ProgressBar" parent="BattlePanel/PlayerStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 75.0
+offset_right = 177.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="MDEFStage" type="Label" parent="BattlePanel/PlayerStatPanel/MDEFStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "MDEF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SPDStatStage" type="ProgressBar" parent="BattlePanel/PlayerStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 95.0
+offset_right = 197.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="SPDStage" type="Label" parent="BattlePanel/PlayerStatPanel/SPDStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "SPD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyStatPanel" type="Panel" parent="BattlePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.668
+anchor_top = -0.234
+anchor_right = 0.753
+offset_left = -0.536072
+offset_top = 0.0140228
+offset_right = 0.543945
+offset_bottom = 1.52588e-05
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7m0r")
+
+[node name="ATKStatStage" type="ProgressBar" parent="BattlePanel/EnemyStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 15.0
+offset_right = 117.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="ATKStage" type="Label" parent="BattlePanel/EnemyStatPanel/ATKStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "ATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DEFStatStage" type="ProgressBar" parent="BattlePanel/EnemyStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_right = 137.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="DEFStage" type="Label" parent="BattlePanel/EnemyStatPanel/DEFStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "DEF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MATKStatStage" type="ProgressBar" parent="BattlePanel/EnemyStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 55.0
+offset_right = 157.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="MATKStage" type="Label" parent="BattlePanel/EnemyStatPanel/MATKStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "MATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MDEFStatStage" type="ProgressBar" parent="BattlePanel/EnemyStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 75.0
+offset_right = 177.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="MDEFStage" type="Label" parent="BattlePanel/EnemyStatPanel/MDEFStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "MDEF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SPDStatStage" type="ProgressBar" parent="BattlePanel/EnemyStatPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 95.0
+offset_right = 197.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="SPDStage" type="Label" parent="BattlePanel/EnemyStatPanel/SPDStatStage"]
+layout_mode = 1
+offset_left = -12.4999
+offset_top = 32.5
+offset_right = 27.5001
+offset_bottom = 55.5
+rotation = -1.5708
+theme_override_colors/font_outline_color = Color(0.145098, 0.145098, 0.145098, 1)
+theme_override_constants/outline_size = 6
+text = "SPD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyHealthPanel" type="Panel" parent="BattlePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.234
+anchor_right = 0.238
+offset_left = 878.0
+offset_top = 0.0140038
+offset_right = 877.824
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtrn2")
+
+[node name="HealthBar" type="ProgressBar" parent="BattlePanel/EnemyHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_ohh7n")
+value = 50.0
+show_percentage = false
+
+[node name="ArmorPanel" type="Panel" parent="BattlePanel/EnemyHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = -0.175
+anchor_right = 0.938
+offset_left = 0.0119991
+offset_right = -0.0119934
+theme_override_styles/panel = SubResource("StyleBoxFlat_l31e3")
+
+[node name="ArmorBar" type="ProgressBar" parent="BattlePanel/EnemyHealthPanel/ArmorPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -1.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ft1tr")
+value = 50.0
+show_percentage = false
+
+[node name="EnemyMonster" type="Label" parent="BattlePanel/EnemyHealthPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062
+anchor_top = -0.75
+anchor_right = 0.938
+anchor_bottom = -0.175
+offset_left = 0.0119991
+offset_right = -0.0119934
+text = "Name - Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8m6lj")
+autoplay = true
+
+[node name="SelectScreenBackground" parent="." instance=ExtResource("5_pcwpu")]
+
+[connection signal="pressed" from="BattlePanel/CombatOptions/FightButton" to="." method="show_fight_options"]
+[connection signal="pressed" from="BattlePanel/CombatOptions/SwitchButton" to="." method="show_switch_options"]

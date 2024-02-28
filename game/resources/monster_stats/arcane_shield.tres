@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://bbdvyli327sj"]
+
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="1_5nba1"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_143br"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="2_e7o3c"]
+[ext_resource type="Texture2D" uid="uid://ccydkj2yjdtsr" path="res://game/assets/Sprites (Battlers) 2x/61_minion_3_xx.png" id="4_ehkgu"]
+
+[resource]
+script = ExtResource("1_143br")
+monster_name = "Arcane Shield"
+is_monster_leader = false
+sprite = ExtResource("4_ehkgu")
+hp = 50
+atk = 40
+def = 125
+matk = 40
+mdef = 125
+spd = 25
+xp_yield = 76
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_5nba1"), ExtResource("2_e7o3c")])
+y_offset = 0.0

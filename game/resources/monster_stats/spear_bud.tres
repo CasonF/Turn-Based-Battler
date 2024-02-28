@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://beyk22cdqme7f"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_tv2e8"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_yil83"]
+[ext_resource type="Texture2D" uid="uid://bpokma24sq8xx" path="res://game/assets/Sprites (Battlers) 2x/20_minion_01_xx.png" id="2_04ect"]
+[ext_resource type="Resource" uid="uid://c320ntdhcjf1h" path="res://game/resources/monster_actions/barricade.tres" id="2_y8o3u"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="3_ldl3u"]
+
+[resource]
+script = ExtResource("1_tv2e8")
+monster_name = "Spear Bud"
+is_monster_leader = false
+sprite = ExtResource("2_04ect")
+hp = 65
+atk = 75
+def = 70
+matk = 40
+mdef = 45
+spd = 45
+xp_yield = 42
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_yil83"), ExtResource("2_y8o3u"), ExtResource("3_ldl3u")])
+y_offset = 0.0

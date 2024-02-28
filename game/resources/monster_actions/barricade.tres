@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c320ntdhcjf1h"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_5xe8d"]
+
+[resource]
+script = ExtResource("1_5xe8d")
+action_name = "Barricade"
+priority = 0
+power = 30
+ap_cost = 2
+action_type = 3
+attack_type = 13

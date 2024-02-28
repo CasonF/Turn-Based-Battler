@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://dyxhkmvi7vmuq"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_2jeqf"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_skxaf"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="2_wcffs"]
+[ext_resource type="Texture2D" uid="uid://b8a25pom4bwok" path="res://game/assets/Sprites (Battlers) 2x/53_minion_4_xx.png" id="3_08wvx"]
+[ext_resource type="Resource" uid="uid://c320ntdhcjf1h" path="res://game/resources/monster_actions/barricade.tres" id="3_ls8q7"]
+
+[resource]
+script = ExtResource("1_2jeqf")
+monster_name = "Spearfrog"
+is_monster_leader = false
+sprite = ExtResource("3_08wvx")
+hp = 50
+atk = 90
+def = 50
+matk = 40
+mdef = 40
+spd = 70
+xp_yield = 50
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_skxaf"), ExtResource("2_wcffs"), ExtResource("3_ls8q7")])
+y_offset = 0.0

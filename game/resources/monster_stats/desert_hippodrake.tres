@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://cyw32yjeu7xhu"]
+
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="1_co8bu"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_qjvqx"]
+[ext_resource type="Texture2D" uid="uid://rlur3a1ts41g" path="res://game/assets/Sprites (Battlers) 2x/47_boss_xx.png" id="2_5hovl"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_rxep8"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="3_mqgy2"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="4_mjy0q"]
+
+[resource]
+script = ExtResource("1_qjvqx")
+monster_name = "Desert Hippodrake"
+is_monster_leader = true
+sprite = ExtResource("2_5hovl")
+hp = 160
+atk = 120
+def = 50
+matk = 35
+mdef = 120
+spd = 30
+xp_yield = 177
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_co8bu"), ExtResource("2_rxep8"), ExtResource("3_mqgy2"), ExtResource("4_mjy0q")])
+y_offset = 0.0

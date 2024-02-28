@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://clfdl643pysn0"]
+
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="1_0ha43"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_n888p"]
+[ext_resource type="Texture2D" uid="uid://do1jn3ekjjtus" path="res://game/assets/Sprites (Battlers) 2x/37_minion_04_xx.png" id="2_r2m2b"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="2_syuvm"]
+[ext_resource type="Resource" uid="uid://e3ecajo873ed" path="res://game/resources/monster_actions/lock_on.tres" id="3_foalb"]
+
+[resource]
+script = ExtResource("1_n888p")
+monster_name = "Shifty Shell"
+is_monster_leader = false
+sprite = ExtResource("2_r2m2b")
+hp = 45
+atk = 40
+def = 180
+matk = 40
+mdef = 80
+spd = 15
+xp_yield = 39
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_0ha43"), ExtResource("2_syuvm"), ExtResource("3_foalb")])
+y_offset = 0.0

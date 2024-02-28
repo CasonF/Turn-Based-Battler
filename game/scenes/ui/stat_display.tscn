@@ -1,0 +1,200 @@
+[gd_scene load_steps=3 format=3 uid="uid://dusao4rbugdj3"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/stat_hex.gd" id="1_54ka3"]
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/stat_chart.gd" id="3_glc67"]
+
+[node name="StatHex" type="Panel"]
+anchors_preset = -1
+anchor_left = -0.182
+anchor_top = -0.324
+anchor_right = 0.182
+anchor_bottom = 0.324
+offset_left = -0.335983
+offset_top = -0.0480042
+offset_right = 0.335983
+offset_bottom = 0.0480042
+script = ExtResource("1_54ka3")
+
+[node name="StatBackdrop" type="Polygon2D" parent="."]
+position = Vector2(210, 210)
+scale = Vector2(1.1, 1.1)
+color = Color(0.4, 0.396078, 0.384314, 0.847059)
+antialiased = true
+polygon = PackedVector2Array(0, -180, 157.5, -90, 157.5, 90, 0, 180, -157.5, 90, -157.5, -90)
+
+[node name="StatChart" type="Polygon2D" parent="."]
+position = Vector2(210, 210)
+color = Color(0, 0.760784, 0.811765, 0.827451)
+antialiased = true
+script = ExtResource("3_glc67")
+
+[node name="HP" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 190.0
+offset_top = -5.0
+offset_right = -190.0
+offset_bottom = -397.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "HP"
+horizontal_alignment = 1
+
+[node name="HPValue" type="Label" parent="HP"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = 18.0
+offset_right = 32.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="SPD" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 191.0
+offset_top = 396.0
+offset_right = -189.0
+offset_bottom = 4.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "SPD"
+horizontal_alignment = 1
+
+[node name="SPDValue" type="Label" parent="SPD"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = -11.0
+offset_right = 32.0
+offset_bottom = 9.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="ATK" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 371.0
+offset_top = 93.0
+offset_right = -9.0
+offset_bottom = -299.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "ATK
+"
+horizontal_alignment = 1
+
+[node name="ATKValue" type="Label" parent="ATK"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = 18.0
+offset_right = 32.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="DEF" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 371.0
+offset_top = 295.0
+offset_right = -9.0
+offset_bottom = -97.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "DEF"
+horizontal_alignment = 1
+
+[node name="DEFValue" type="Label" parent="DEF"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = -10.0
+offset_right = 32.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="MATK" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 93.0
+offset_right = -365.0
+offset_bottom = -299.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "MATK
+"
+horizontal_alignment = 1
+
+[node name="MATKValue" type="Label" parent="MATK"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="MDEF" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 295.0
+offset_right = -365.0
+offset_bottom = -97.0
+theme_override_colors/font_outline_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "MDEF
+"
+horizontal_alignment = 1
+
+[node name="MDEFValue" type="Label" parent="MDEF"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 18.0
+offset_top = -10.0
+offset_right = 42.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0.854902, 0.913725, 1)
+theme_override_colors/font_outline_color = Color(0, 0.494118, 0.529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
