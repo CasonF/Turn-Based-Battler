@@ -1,15 +1,33 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://b4p8oipanvnt8"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=23 format=3 uid="uid://b4p8oipanvnt8"]
 
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_mvt1o"]
 [ext_resource type="Texture2D" uid="uid://c1vsupn2s0mim" path="res://game/assets/Sprites (Battlers) 2x/37_boss_xx.png" id="2_2stal"]
 [ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="2_so8ii"]
 [ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="3_qwc0y"]
+[ext_resource type="Resource" uid="uid://calhx2lmhfqd2" path="res://game/resources/monster_actions/pin_needles.tres" id="4_48p6e"]
 [ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="4_q50gk"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_iq3hc"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="6_shlcf"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="7_c0wqp"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="8_ab3ow"]
+[ext_resource type="Resource" uid="uid://bwq4t8jxqora1" path="res://game/resources/monster_actions/glacial_crush.tres" id="9_4bw61"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="10_lxlm3"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="11_84wpr"]
+[ext_resource type="Resource" uid="uid://e3ecajo873ed" path="res://game/resources/monster_actions/lock_on.tres" id="12_gm28j"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="13_duelu"]
+[ext_resource type="Resource" uid="uid://duu0p31rbdcif" path="res://game/resources/monster_actions/multi_stab.tres" id="14_2daot"]
+[ext_resource type="Resource" uid="uid://dfrrfxmx5dr81" path="res://game/resources/monster_actions/punch.tres" id="15_3ltq6"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="16_gejym"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="17_4u0pv"]
+[ext_resource type="Resource" uid="uid://bg1jqm0up5vp1" path="res://game/resources/monster_actions/slash.tres" id="18_mfiql"]
+[ext_resource type="Resource" uid="uid://co4oujqiupyqn" path="res://game/resources/monster_actions/torpedo_strike.tres" id="19_kcqlj"]
+[ext_resource type="Resource" uid="uid://ckwx5vlwwhvt8" path="res://game/resources/monster_actions/tsunami.tres" id="20_7r2vg"]
 
 [resource]
 script = ExtResource("1_mvt1o")
 monster_name = "Shell Champion"
 is_monster_leader = true
+default_direction_left = false
 sprite = ExtResource("2_2stal")
 hp = 86
 atk = 113
@@ -19,5 +37,6 @@ mdef = 57
 spd = 54
 xp_yield = 135
 growth_rate = 1
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_so8ii"), ExtResource("3_qwc0y"), ExtResource("4_q50gk")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_so8ii"), ExtResource("3_qwc0y"), ExtResource("4_q50gk"), ExtResource("4_48p6e")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_iq3hc"), ExtResource("6_shlcf"), ExtResource("7_c0wqp"), ExtResource("8_ab3ow"), ExtResource("9_4bw61"), ExtResource("10_lxlm3"), ExtResource("11_84wpr"), ExtResource("12_gm28j"), ExtResource("13_duelu"), ExtResource("14_2daot"), ExtResource("4_48p6e"), ExtResource("15_3ltq6"), ExtResource("16_gejym"), ExtResource("17_4u0pv"), ExtResource("18_mfiql"), ExtResource("2_so8ii"), ExtResource("3_qwc0y"), ExtResource("19_kcqlj"), ExtResource("20_7r2vg"), ExtResource("4_q50gk")])
 y_offset = 0.0

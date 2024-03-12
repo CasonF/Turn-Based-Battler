@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=13 format=3 uid="uid://yery0oq0oc17"]
+
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="1_ey1e7"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_m66qc"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="2_me7j8"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="3_owwi7"]
+[ext_resource type="Resource" uid="uid://bixwe85sdqupk" path="res://game/resources/monster_actions/toxin.tres" id="4_b5jpl"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_bb4f5"]
+[ext_resource type="Texture2D" uid="uid://klaqvgte6mwc" path="res://game/assets/Sprites (Battlers) 2x/33_minion_03_xx.png" id="5_bsewf"]
+[ext_resource type="Resource" uid="uid://colybaheufvat" path="res://game/resources/monster_actions/cleanse.tres" id="6_dddg1"]
+[ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="7_pkf7y"]
+[ext_resource type="Resource" uid="uid://21rp0rgfq7sn" path="res://game/resources/monster_actions/draining_tendrils.tres" id="8_tyhq2"]
+[ext_resource type="Resource" uid="uid://brg0odd88hlsb" path="res://game/resources/monster_actions/mind_seal.tres" id="9_idyfs"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="10_3c010"]
+
+[resource]
+script = ExtResource("1_m66qc")
+monster_name = "Coolshroom"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("5_bsewf")
+hp = 64
+atk = 58
+def = 58
+matk = 74
+mdef = 74
+spd = 48
+xp_yield = 79
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_ey1e7"), ExtResource("2_me7j8"), ExtResource("3_owwi7"), ExtResource("4_b5jpl")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("3_owwi7"), ExtResource("5_bb4f5"), ExtResource("6_dddg1"), ExtResource("1_ey1e7"), ExtResource("7_pkf7y"), ExtResource("8_tyhq2"), ExtResource("9_idyfs"), ExtResource("2_me7j8"), ExtResource("10_3c010"), ExtResource("4_b5jpl")])
+y_offset = 0.0

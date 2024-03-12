@@ -3,9 +3,10 @@ extends Node
 # Closer avg team level is to this number, smarter it should be
 var difficulty_threshold : int = 100
 
-enum INTENT {ATTACK, HEAL, DEFEND, SWITCH, STAT}
+enum INTENT {ATTACK, HEAL, DEFEND, SWITCH, STAT, WAIT}
 
 func get_next_action(ai: Monster, player: Monster, ai_team: Array[Monster]) -> BattleManager.Action:
+	print("Getting AI action...")
 	var avg_team_level : int = ai.level
 	for t:Monster in ai_team:
 		avg_team_level += t.level
@@ -46,22 +47,25 @@ func get_legal_actions(ai:Monster, ai_team:Array[Monster]) -> LegalActions:
 	var legal : LegalActions = LegalActions.new()
 	if ai.current_hp > 0:
 		legal.has_hp = true
-	for move:MonsterAction in ai.data.actions:
-		if move.action_type == move.ACTION_TYPE.PHYSICAL:
-			legal.can_attack = true
-			legal.can_attack_phys = true
-		if move.action_type == move.ACTION_TYPE.MAGICAL:
-			legal.can_attack = true
-			legal.can_attack_magic = true
-		if move.action_type == move.ACTION_TYPE.OTHER:
-			if move.attack_type == move.ATTACK_TYPE.DEFEND:
-				legal.can_defend = true
-			else:
-				# Only other OTHER types are stat buffs, currently...
-				legal.can_raise_stat = true
-		if move.action_type == move.ACTION_TYPE.STATUS:
-			if move.attack_type == move.ATTACK_TYPE.HEAL:
-				legal.can_heal = true
+	for move:MonsterAction in ai.known_actions:
+		if move.ap_cost <= ai.AP:
+			if move.action_type == move.ACTION_TYPE.PHYSICAL:
+				legal.can_attack = true
+				legal.can_attack_phys = true
+			if move.action_type == move.ACTION_TYPE.MAGICAL:
+				legal.can_attack = true
+				legal.can_attack_magic = true
+			if move.action_type == move.ACTION_TYPE.OTHER:
+				if move.attack_type == move.ATTACK_TYPE.DEFEND:
+					legal.can_defend = true
+				elif move.attack_type == move.ATTACK_TYPE.HEAL:
+					legal.can_heal
+				else:
+					# Only other OTHER types are stat buffs, currently...
+					legal.can_raise_stat = true
+			if move.action_type == move.ACTION_TYPE.STATUS:
+				if move.attack_type == move.ATTACK_TYPE.HEAL:
+					legal.can_heal = true
 	for mem:Monster in ai_team:
 		if mem.current_hp > 0:
 			legal.can_switch = true
@@ -89,7 +93,9 @@ func get_random_intent(ai:Monster, legal: LegalActions) -> INTENT:
 	if !legal.has_hp: # Force switch
 		intent = INTENT.SWITCH
 	elif legal.can_attack and legal.can_defend and legal.can_heal and legal.can_raise_stat:
-		if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 			if rand < 0.15:
 				intent = INTENT.HEAL
 		elif rand < 0.30:
@@ -97,35 +103,52 @@ func get_random_intent(ai:Monster, legal: LegalActions) -> INTENT:
 		elif rand < 0.45:
 			intent = INTENT.STAT
 	elif legal.can_attack and legal.can_defend and legal.can_heal:
-		if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 			if rand < 0.2:
 				intent = INTENT.HEAL
 		elif rand < 0.4:
 			intent = INTENT.DEFEND
 	elif legal.can_attack and legal.can_heal and legal.can_raise_stat:
-		if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 			if rand < 0.2:
 				intent = INTENT.HEAL
 		elif rand < 0.4:
 			intent = INTENT.STAT
 	elif legal.can_attack and legal.can_defend and legal.can_raise_stat:
-		if rand < 0.2:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif rand < 0.2:
 			intent = INTENT.DEFEND
 		elif rand < 0.4:
 			intent = INTENT.STAT
 	elif legal.can_attack and legal.can_defend:
-		if rand < 0.3:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif rand < 0.3:
 			intent = INTENT.DEFEND
 	elif legal.can_attack and legal.can_heal:
-		if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 			if rand < 0.3:
 				intent = INTENT.HEAL
 	elif legal.can_attack and legal.can_raise_stat:
-		if rand < 0.3:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
+		elif rand < 0.3:
 			intent = INTENT.STAT
+	elif legal.can_attack:
+		if ai.AP < 4 and rand > 0.8:
+			intent = INTENT.WAIT
 	elif legal.can_defend or legal.can_heal or legal.can_raise_stat:
 		if legal.can_defend and legal.can_heal and legal.can_raise_stat:
-			if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 				if rand < 0.3:
 					intent = INTENT.HEAL
 				elif rand < 0.6:
@@ -133,28 +156,45 @@ func get_random_intent(ai:Monster, legal: LegalActions) -> INTENT:
 				else:
 					intent = INTENT.STAT
 		elif legal.can_defend and legal.can_heal:
-			if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 				if rand < 0.4:
 					intent = INTENT.HEAL
 				else:
 					intent = INTENT.DEFEND
 		elif legal.can_raise_stat and legal.can_heal:
-			if (float(ai.current_hp) / float(ai.HP)) < 1.0:
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			elif (float(ai.current_hp) / float(ai.HP)) < 1.0:
 				if rand < 0.4:
 					intent = INTENT.HEAL
 				else:
 					intent = INTENT.STAT
 		elif legal.can_defend and legal.can_raise_stat:
-			if rand < 0.4:
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			elif rand < 0.4:
 				intent = INTENT.STAT
 			else:
 				intent = INTENT.DEFEND
 		elif legal.can_defend:
-			intent = INTENT.DEFEND
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			else:
+				intent = INTENT.DEFEND
 		elif legal.can_raise_stat:
-			intent = INTENT.STAT
-		else:
-			intent = INTENT.HEAL
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			else:
+				intent = INTENT.STAT
+		elif legal.can_heal:
+			if ai.AP < 4 and rand > 0.8:
+				intent = INTENT.WAIT
+			else:
+				intent = INTENT.HEAL
+	elif !legal.can_attack:
+		intent = INTENT.WAIT
 	return intent
 
 func get_random_action(intent: INTENT, ai:Monster, ai_team:Array[Monster]) -> BattleManager.Action:
@@ -169,20 +209,26 @@ func get_random_action(intent: INTENT, ai:Monster, ai_team:Array[Monster]) -> Ba
 				action.priority = 100
 				action.target = mon
 				action.user = ai
+			action.type = action.TYPES.SWITCH
+	elif intent == INTENT.WAIT:
+		action.user = ai
+		action.type = action.TYPES.WAIT
 	else:
-		for move:MonsterAction in ai.data.actions:
+		for move:MonsterAction in ai.known_actions:
 			if intent == INTENT.ATTACK and (move.action_type == move.ACTION_TYPE.PHYSICAL or move.action_type == move.ACTION_TYPE.MAGICAL):
-				if !action.action or randf_range(0, 1.0) > 0.5:
+				if (!action.action or randf_range(0, 1.0) > 0.5) and move.ap_cost <= ai.AP:
 					action.action = move
 			elif intent == INTENT.DEFEND and move.action_type == move.ACTION_TYPE.OTHER and move.attack_type == move.ATTACK_TYPE.DEFEND:
-				if !action.action or randf_range(0, 1.0) > 0.5:
+				if (!action.action or randf_range(0, 1.0) > 0.5) and move.ap_cost <= ai.AP:
 					action.action = move
-			elif intent == INTENT.HEAL and move.action_type == move.ACTION_TYPE.STATUS and move.attack_type == move.ATTACK_TYPE.HEAL:
-				if !action.action or randf_range(0, 1.0) > 0.5:
+			elif intent == INTENT.HEAL and move.attack_type == move.ATTACK_TYPE.HEAL:
+				if (!action.action or randf_range(0, 1.0) > 0.5) and move.ap_cost <= ai.AP:
 					action.action = move
 			elif intent == INTENT.STAT and move.action_type == move.ACTION_TYPE.OTHER and !move.attack_type:
-				if !action.action or randf_range(0, 1.0) > 0.5:
+				if (!action.action or randf_range(0, 1.0) > 0.5) and move.ap_cost <= ai.AP:
 					action.action = move
+		# Kind of a catch-all
+		action.type = action.TYPES.ATTACK
 	return action
 
 class LegalActions:

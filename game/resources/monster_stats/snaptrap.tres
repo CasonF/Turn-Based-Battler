@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=18 format=3 uid="uid://h7hpaldlsv77"]
+
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="1_fju6q"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_mwk6g"]
+[ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="2_7asb8"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="3_iyv0s"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="4_r5y3w"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="5_dwuax"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="6_4lbpt"]
+[ext_resource type="Texture2D" uid="uid://f0vqt13oushi" path="res://game/assets/Sprites (Battlers) 2x/33_minion_02_xx.png" id="6_5l1c2"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="7_0ilae"]
+[ext_resource type="Resource" uid="uid://21rp0rgfq7sn" path="res://game/resources/monster_actions/draining_tendrils.tres" id="8_numo5"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="9_bhxfc"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="10_cbu07"]
+[ext_resource type="Resource" uid="uid://calhx2lmhfqd2" path="res://game/resources/monster_actions/pin_needles.tres" id="11_g6kr6"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="12_ewkwm"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="13_70ni7"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="14_xhgkv"]
+[ext_resource type="Resource" uid="uid://bixwe85sdqupk" path="res://game/resources/monster_actions/toxin.tres" id="15_xuy70"]
+
+[resource]
+script = ExtResource("1_mwk6g")
+monster_name = "Snaptrap"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("6_5l1c2")
+hp = 48
+atk = 108
+def = 68
+matk = 48
+mdef = 68
+spd = 48
+xp_yield = 75
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_fju6q"), ExtResource("2_7asb8"), ExtResource("3_iyv0s"), ExtResource("4_r5y3w")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_dwuax"), ExtResource("6_4lbpt"), ExtResource("1_fju6q"), ExtResource("7_0ilae"), ExtResource("2_7asb8"), ExtResource("8_numo5"), ExtResource("3_iyv0s"), ExtResource("9_bhxfc"), ExtResource("10_cbu07"), ExtResource("11_g6kr6"), ExtResource("12_ewkwm"), ExtResource("13_70ni7"), ExtResource("14_xhgkv"), ExtResource("15_xuy70")])
+y_offset = 0.0

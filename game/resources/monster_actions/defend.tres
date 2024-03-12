@@ -6,7 +6,11 @@
 script = ExtResource("1_7fk5h")
 action_name = "Defend"
 priority = 0
-power = 15
+description = PackedStringArray("The user braces themself in an attempt to reduce incoming damage.\nIncreases user Armor a little.")
+power = 30
 ap_cost = 1
 action_type = 3
 attack_type = 13
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

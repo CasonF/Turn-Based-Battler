@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bkti1q5gxmeuk"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_ijga8"]
+
+[resource]
+script = ExtResource("1_ijga8")
+action_name = "Glare"
+priority = 0
+description = PackedStringArray("The user glares the foe, causing them to doubt themselves, lowering their mental defenses.\nLowers target MDEF by 1 stage.")
+power = 0
+ap_cost = 0
+action_type = 3
+attack_type = 0
+action_effect = 8
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

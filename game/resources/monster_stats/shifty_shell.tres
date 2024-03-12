@@ -1,15 +1,26 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://clfdl643pysn0"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=16 format=3 uid="uid://clfdl643pysn0"]
 
 [ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="1_0ha43"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_n888p"]
 [ext_resource type="Texture2D" uid="uid://do1jn3ekjjtus" path="res://game/assets/Sprites (Battlers) 2x/37_minion_04_xx.png" id="2_r2m2b"]
 [ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="2_syuvm"]
 [ext_resource type="Resource" uid="uid://e3ecajo873ed" path="res://game/resources/monster_actions/lock_on.tres" id="3_foalb"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="4_2ros0"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="5_0o4vg"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="6_bgsj4"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="7_gjstb"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="8_tyrps"]
+[ext_resource type="Resource" uid="uid://duu0p31rbdcif" path="res://game/resources/monster_actions/multi_stab.tres" id="9_ssq7q"]
+[ext_resource type="Resource" uid="uid://b5qm1eyo42ebw" path="res://game/resources/monster_actions/ointment.tres" id="10_meo7u"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="11_je7xe"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="12_pyvlq"]
+[ext_resource type="Resource" uid="uid://0ei2y8lw1v2q" path="res://game/resources/monster_actions/withdraw.tres" id="13_dfh5v"]
 
 [resource]
 script = ExtResource("1_n888p")
 monster_name = "Shifty Shell"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("2_r2m2b")
 hp = 45
 atk = 40
@@ -19,5 +30,6 @@ mdef = 80
 spd = 15
 xp_yield = 39
 growth_rate = 0
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_0ha43"), ExtResource("2_syuvm"), ExtResource("3_foalb")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_0ha43"), ExtResource("2_syuvm"), ExtResource("3_foalb"), ExtResource("4_2ros0")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_0o4vg"), ExtResource("6_bgsj4"), ExtResource("7_gjstb"), ExtResource("4_2ros0"), ExtResource("3_foalb"), ExtResource("8_tyrps"), ExtResource("9_ssq7q"), ExtResource("10_meo7u"), ExtResource("11_je7xe"), ExtResource("12_pyvlq"), ExtResource("1_0ha43"), ExtResource("2_syuvm"), ExtResource("13_dfh5v")])
 y_offset = 0.0

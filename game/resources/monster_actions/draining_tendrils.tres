@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://21rp0rgfq7sn"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_f2o7v"]
+
+[resource]
+script = ExtResource("1_f2o7v")
+action_name = "Draining Tendrils"
+priority = 0
+description = PackedStringArray("Dark tentacles rise from the shadows, ensnaring the foe, slowing them down and draining their life force.\nHeals ~50% of damage inflicted.\nLowers target SPD by 1 stage.")
+power = 20
+ap_cost = 2
+action_type = 1
+attack_type = 11
+action_effect = 21
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

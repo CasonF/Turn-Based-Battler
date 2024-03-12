@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://3eby30qh6j26"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_rkcb0"]
+
+[resource]
+script = ExtResource("1_rkcb0")
+action_name = "Snarl"
+priority = 0
+description = PackedStringArray("The user snarls at the foe meanly, weakening their mental acuity somewhat.\nLowers target MATK by 1 stage.")
+power = 0
+ap_cost = 0
+action_type = 3
+attack_type = 0
+action_effect = 6
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

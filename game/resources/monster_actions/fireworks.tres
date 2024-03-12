@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://d3fnw662yabbk"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_yf72x"]
+
+[resource]
+script = ExtResource("1_yf72x")
+action_name = "Fireworks"
+priority = 0
+description = PackedStringArray("An explosive rocket is launched at the target, exploding to deal damage and potentially causing a burn.")
+power = 50
+ap_cost = 1
+action_type = 1
+attack_type = 5
+action_effect = 27
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c5le5vpwwlh1k"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_0v6ia"]
+
+[resource]
+script = ExtResource("1_0v6ia")
+action_name = "Antidote"
+priority = 0
+description = PackedStringArray("The user consumes a phial of anidote to cure their poisoned status.")
+power = 0
+ap_cost = 0
+action_type = 2
+attack_type = 0
+action_effect = 28
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

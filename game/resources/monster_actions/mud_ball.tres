@@ -6,8 +6,11 @@
 script = ExtResource("1_lyw8p")
 action_name = "Mud Ball"
 priority = 0
+description = PackedStringArray("A ball of mud is slung at the foe, making it difficult for them to move as freely.\nLowers target SPD by 1 stage.")
 power = 40
 ap_cost = 0
 action_type = 1
 attack_type = 9
-action_effect = 7
+action_effect = 9
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

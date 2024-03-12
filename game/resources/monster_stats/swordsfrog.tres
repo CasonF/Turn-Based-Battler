@@ -1,15 +1,34 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://vej8uul6sh5v"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=24 format=3 uid="uid://vej8uul6sh5v"]
 
 [ext_resource type="Resource" uid="uid://q8w4yxe4nb0k" path="res://game/resources/monster_actions/wide_slash.tres" id="1_1h7tx"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_fnoxm"]
 [ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_pv6uk"]
 [ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="3_1x6ng"]
+[ext_resource type="Resource" uid="uid://3eby30qh6j26" path="res://game/resources/monster_actions/snarl.tres" id="4_gt8kq"]
 [ext_resource type="Texture2D" uid="uid://gbi2fhlb4vnn" path="res://game/assets/Sprites (Battlers) 2x/53_minion_01_xx.png" id="4_po54r"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="5_6wub4"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="6_b286f"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="7_tv73b"]
+[ext_resource type="Resource" uid="uid://c0afxrend5wvl" path="res://game/resources/monster_actions/bomb.tres" id="8_vyyst"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="9_ooojs"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="10_8cyac"]
+[ext_resource type="Resource" uid="uid://diuic0vluwaiy" path="res://game/resources/monster_actions/mana_slice.tres" id="11_ns1ry"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="12_iqh3v"]
+[ext_resource type="Resource" uid="uid://b5khb0e2i8toj" path="res://game/resources/monster_actions/multi_slash.tres" id="13_l1xco"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="14_06hl4"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="15_tvqfk"]
+[ext_resource type="Resource" uid="uid://bg1jqm0up5vp1" path="res://game/resources/monster_actions/slash.tres" id="16_y1ls0"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="17_mr8ma"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="18_nhmfp"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="19_h5pet"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="20_ood53"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="21_ulsbn"]
 
 [resource]
 script = ExtResource("1_fnoxm")
 monster_name = "Swordsfrog"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("4_po54r")
 hp = 50
 atk = 90
@@ -19,5 +38,6 @@ mdef = 40
 spd = 40
 xp_yield = 51
 growth_rate = 1
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_1h7tx"), ExtResource("2_pv6uk"), ExtResource("3_1x6ng")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_1h7tx"), ExtResource("2_pv6uk"), ExtResource("3_1x6ng"), ExtResource("4_gt8kq")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_6wub4"), ExtResource("6_b286f"), ExtResource("7_tv73b"), ExtResource("8_vyyst"), ExtResource("3_1x6ng"), ExtResource("2_pv6uk"), ExtResource("9_ooojs"), ExtResource("10_8cyac"), ExtResource("11_ns1ry"), ExtResource("12_iqh3v"), ExtResource("13_l1xco"), ExtResource("14_06hl4"), ExtResource("15_tvqfk"), ExtResource("16_y1ls0"), ExtResource("17_mr8ma"), ExtResource("18_nhmfp"), ExtResource("19_h5pet"), ExtResource("20_ood53"), ExtResource("21_ulsbn"), ExtResource("1_1h7tx")])
 y_offset = 0.0

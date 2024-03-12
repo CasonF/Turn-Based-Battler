@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bnayrt1fqybtl"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_hsewp"]
+
+[resource]
+script = ExtResource("1_hsewp")
+action_name = "Chain Lightning"
+priority = 0
+description = PackedStringArray("Electricity links together, getting stronger each time this attack is used in succession.")
+power = 60
+ap_cost = 2
+action_type = 1
+attack_type = 10
+action_effect = 17
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

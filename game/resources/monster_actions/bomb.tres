@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c0afxrend5wvl"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_fb7l7"]
+
+[resource]
+script = ExtResource("1_fb7l7")
+action_name = "Bomb"
+priority = 0
+description = PackedStringArray("A bomb is detonated on the foe, but the blast also damage the user.")
+power = 100
+ap_cost = 1
+action_type = 0
+attack_type = 5
+action_effect = 12
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

@@ -1,15 +1,27 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://dfk0qh7ald2mu"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=17 format=3 uid="uid://dfk0qh7ald2mu"]
 
 [ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="1_e4ob3"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_wk8gs"]
 [ext_resource type="Texture2D" uid="uid://c07amqyo8758e" path="res://game/assets/Sprites (Battlers) 2x/47_minion_03_xx.png" id="2_10c16"]
 [ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="2_wjvv6"]
 [ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="3_qwp0r"]
+[ext_resource type="Resource" uid="uid://calhx2lmhfqd2" path="res://game/resources/monster_actions/pin_needles.tres" id="4_nq6y2"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_v6qdx"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="6_jv8yo"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="7_odrf1"]
+[ext_resource type="Resource" uid="uid://bxg2hrfgvi5ie" path="res://game/resources/monster_actions/earthquake.tres" id="8_elbi1"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="9_0pgq0"]
+[ext_resource type="Resource" uid="uid://b5qm1eyo42ebw" path="res://game/resources/monster_actions/ointment.tres" id="10_36yr6"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="11_ejvxg"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="12_6tgsx"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="13_o0igl"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="14_cbdfc"]
 
 [resource]
 script = ExtResource("1_wk8gs")
 monster_name = "Prickle Calfdrake"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("2_10c16")
 hp = 115
 atk = 90
@@ -19,5 +31,6 @@ mdef = 75
 spd = 20
 xp_yield = 45
 growth_rate = 1
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_e4ob3"), ExtResource("2_wjvv6"), ExtResource("3_qwp0r")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_e4ob3"), ExtResource("2_wjvv6"), ExtResource("3_qwp0r"), ExtResource("4_nq6y2")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_v6qdx"), ExtResource("6_jv8yo"), ExtResource("7_odrf1"), ExtResource("3_qwp0r"), ExtResource("8_elbi1"), ExtResource("9_0pgq0"), ExtResource("10_36yr6"), ExtResource("11_ejvxg"), ExtResource("4_nq6y2"), ExtResource("12_6tgsx"), ExtResource("2_wjvv6"), ExtResource("13_o0igl"), ExtResource("1_e4ob3"), ExtResource("14_cbdfc")])
 y_offset = 0.0

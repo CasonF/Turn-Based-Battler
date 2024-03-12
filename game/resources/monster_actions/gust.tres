@@ -6,7 +6,11 @@
 script = ExtResource("1_fqpdr")
 action_name = "Gust"
 priority = 1
+description = PackedStringArray("A swift gust of wind sweeps by, knocking the foe around.\nHas +1 Priority.")
 power = 20
 ap_cost = 0
 action_type = 1
 attack_type = 8
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

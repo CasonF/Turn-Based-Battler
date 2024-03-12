@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://3akb1h7v3at8"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_d4adg"]
+
+[resource]
+script = ExtResource("1_d4adg")
+action_name = "Synthesis"
+priority = 0
+description = PackedStringArray("The user refines the energy within themself to recover their health and improve their resistance to magic.\nHeals a moderate amount.\nRaises user MDEF by 1 stage.")
+power = 50
+ap_cost = 2
+action_type = 2
+attack_type = 12
+action_effect = 22
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

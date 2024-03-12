@@ -1,16 +1,31 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://ddw8hlshxc3wl"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=21 format=3 uid="uid://ddw8hlshxc3wl"]
 
 [ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="1_48l0s"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_u0pvj"]
 [ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="2_pcacv"]
 [ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="3_l7n38"]
 [ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="4_olftv"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="5_q8ix4"]
 [ext_resource type="Texture2D" uid="uid://bbokkutdsmdp8" path="res://game/assets/Sprites (Battlers) 2x/18_minion_04_xx.png" id="6_3g0nr"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="6_l4b2a"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="7_nywqp"]
+[ext_resource type="Resource" uid="uid://bnayrt1fqybtl" path="res://game/resources/monster_actions/chain_lightning.tres" id="8_dpqaq"]
+[ext_resource type="Resource" uid="uid://crp0wcvi7fn28" path="res://game/resources/monster_actions/charge_beam.tres" id="9_8km0h"]
+[ext_resource type="Resource" uid="uid://colybaheufvat" path="res://game/resources/monster_actions/cleanse.tres" id="10_qkr08"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="11_nc017"]
+[ext_resource type="Resource" uid="uid://21rp0rgfq7sn" path="res://game/resources/monster_actions/draining_tendrils.tres" id="12_vqjyl"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="13_dq6su"]
+[ext_resource type="Resource" uid="uid://calhx2lmhfqd2" path="res://game/resources/monster_actions/pin_needles.tres" id="14_cme1d"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="15_j1lyb"]
+[ext_resource type="Resource" uid="uid://dkw5auyjmemhj" path="res://game/resources/monster_actions/soul_siphon.tres" id="16_fj655"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="17_5moet"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="18_nianh"]
 
 [resource]
 script = ExtResource("1_u0pvj")
 monster_name = "Jellyfloat"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("6_3g0nr")
 hp = 55
 atk = 40
@@ -21,4 +36,5 @@ spd = 75
 xp_yield = 72
 growth_rate = 2
 actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_48l0s"), ExtResource("2_pcacv"), ExtResource("3_l7n38"), ExtResource("4_olftv")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_q8ix4"), ExtResource("3_l7n38"), ExtResource("6_l4b2a"), ExtResource("7_nywqp"), ExtResource("8_dpqaq"), ExtResource("9_8km0h"), ExtResource("10_qkr08"), ExtResource("11_nc017"), ExtResource("2_pcacv"), ExtResource("12_vqjyl"), ExtResource("13_dq6su"), ExtResource("14_cme1d"), ExtResource("15_j1lyb"), ExtResource("16_fj655"), ExtResource("1_48l0s"), ExtResource("17_5moet"), ExtResource("18_nianh"), ExtResource("4_olftv")])
 y_offset = 0.0

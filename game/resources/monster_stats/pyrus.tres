@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=14 format=3 uid="uid://bimik7mp8f2ld"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_0cs8l"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="1_k3x6r"]
+[ext_resource type="Resource" uid="uid://b6604iy4wwiub" path="res://game/resources/monster_actions/fireball.tres" id="2_t0sua"]
+[ext_resource type="Resource" uid="uid://dfrrfxmx5dr81" path="res://game/resources/monster_actions/punch.tres" id="3_gr5fi"]
+[ext_resource type="Resource" uid="uid://wai13nhlc2lx" path="res://game/resources/monster_actions/embers.tres" id="4_106c6"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="5_463dg"]
+[ext_resource type="Texture2D" uid="uid://cqvp24g5jwxh1" path="res://game/assets/Sprites (Battlers) 2x/48_minion_01_xx.png" id="5_ihxek"]
+[ext_resource type="Resource" uid="uid://c0afxrend5wvl" path="res://game/resources/monster_actions/bomb.tres" id="6_fymel"]
+[ext_resource type="Resource" uid="uid://d3fnw662yabbk" path="res://game/resources/monster_actions/fireworks.tres" id="7_xle1m"]
+[ext_resource type="Resource" uid="uid://buhn7ft5bgrrm" path="res://game/resources/monster_actions/gust.tres" id="8_j7pxb"]
+[ext_resource type="Resource" uid="uid://whni487rpbmm" path="res://game/resources/monster_actions/supernova.tres" id="9_vo85h"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="10_h5wuh"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="11_tgtss"]
+
+[resource]
+script = ExtResource("1_0cs8l")
+monster_name = "Pyrus"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("5_ihxek")
+hp = 50
+atk = 70
+def = 50
+matk = 100
+mdef = 50
+spd = 85
+xp_yield = 80
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_k3x6r"), ExtResource("2_t0sua"), ExtResource("3_gr5fi"), ExtResource("4_106c6")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_463dg"), ExtResource("6_fymel"), ExtResource("1_k3x6r"), ExtResource("4_106c6"), ExtResource("2_t0sua"), ExtResource("7_xle1m"), ExtResource("8_j7pxb"), ExtResource("3_gr5fi"), ExtResource("9_vo85h"), ExtResource("10_h5wuh"), ExtResource("11_tgtss")])
+y_offset = 0.0

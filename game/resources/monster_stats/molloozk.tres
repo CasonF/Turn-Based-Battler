@@ -1,14 +1,32 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://diirafjsnrvo0"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=22 format=3 uid="uid://diirafjsnrvo0"]
 
 [ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="1_ep80e"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_hv78m"]
 [ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="2_6o65l"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="3_2618o"]
 [ext_resource type="Texture2D" uid="uid://ddblyaljnu7m2" path="res://game/assets/Sprites (Battlers) 2x/18_minion_02_xx.png" id="4_13cvv"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="4_q1pyw"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_k6bxv"]
+[ext_resource type="Resource" uid="uid://c320ntdhcjf1h" path="res://game/resources/monster_actions/barricade.tres" id="6_ak70d"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="7_2ivst"]
+[ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="8_q486k"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="9_04o4b"]
+[ext_resource type="Resource" uid="uid://bwq4t8jxqora1" path="res://game/resources/monster_actions/glacial_crush.tres" id="10_cb3ku"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="11_mdjd5"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="12_cv3lb"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="13_11xor"]
+[ext_resource type="Resource" uid="uid://b5qm1eyo42ebw" path="res://game/resources/monster_actions/ointment.tres" id="14_b7ucb"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="15_5ttul"]
+[ext_resource type="Resource" uid="uid://3eby30qh6j26" path="res://game/resources/monster_actions/snarl.tres" id="16_vfjoe"]
+[ext_resource type="Resource" uid="uid://ckwx5vlwwhvt8" path="res://game/resources/monster_actions/tsunami.tres" id="17_np5kg"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="18_iskgk"]
+[ext_resource type="Resource" uid="uid://0ei2y8lw1v2q" path="res://game/resources/monster_actions/withdraw.tres" id="19_c30on"]
 
 [resource]
 script = ExtResource("1_hv78m")
 monster_name = "Molloozk"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("4_13cvv")
 hp = 100
 atk = 35
@@ -18,5 +36,6 @@ mdef = 95
 spd = 15
 xp_yield = 79
 growth_rate = 0
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_ep80e"), ExtResource("2_6o65l")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_ep80e"), ExtResource("2_6o65l"), ExtResource("3_2618o"), ExtResource("4_q1pyw")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_k6bxv"), ExtResource("6_ak70d"), ExtResource("1_ep80e"), ExtResource("3_2618o"), ExtResource("4_q1pyw"), ExtResource("7_2ivst"), ExtResource("8_q486k"), ExtResource("9_04o4b"), ExtResource("10_cb3ku"), ExtResource("11_mdjd5"), ExtResource("12_cv3lb"), ExtResource("13_11xor"), ExtResource("14_b7ucb"), ExtResource("15_5ttul"), ExtResource("16_vfjoe"), ExtResource("17_np5kg"), ExtResource("2_6o65l"), ExtResource("18_iskgk"), ExtResource("19_c30on")])
 y_offset = 0.0

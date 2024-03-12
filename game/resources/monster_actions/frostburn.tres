@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://d11ojpf8sfh1s"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_g4uwx"]
+
+[resource]
+script = ExtResource("1_g4uwx")
+action_name = "Frostburn"
+priority = 0
+description = PackedStringArray("The target is flash-frozen in ice, freezing them and burning them simultaneously.")
+power = 0
+ap_cost = 3
+action_type = 2
+attack_type = 7
+action_effect = 33
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

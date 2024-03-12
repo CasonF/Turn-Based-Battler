@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bb0ggvnq2mu84"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_4hlqo"]
+
+[resource]
+script = ExtResource("1_4hlqo")
+action_name = "Reversal"
+priority = 0
+description = PackedStringArray("The brink of defeat empowers the user, encouraging them to use more of their strength the lower their HP.")
+power = -1
+ap_cost = 1
+action_type = 0
+attack_type = 2
+action_effect = 15
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

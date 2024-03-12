@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://crp0wcvi7fn28"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_bug1i"]
+
+[resource]
+script = ExtResource("1_bug1i")
+action_name = "Charge Beam"
+priority = 0
+description = PackedStringArray("The user expends all of their stored energy to unleash a beam of pure energy at the target.\nPower = AP x 40")
+power = 0
+ap_cost = -1
+action_type = 1
+attack_type = 10
+action_effect = 23
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

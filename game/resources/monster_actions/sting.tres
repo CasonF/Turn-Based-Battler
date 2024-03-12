@@ -6,7 +6,11 @@
 script = ExtResource("1_vqet7")
 action_name = "Sting"
 priority = 1
+description = PackedStringArray("A rapid strike with a small projectile or stinger to inflict some damage.\nHas +1 Priority.")
 power = 15
 ap_cost = 0
 action_type = 0
 attack_type = 3
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

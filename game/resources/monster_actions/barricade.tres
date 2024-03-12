@@ -5,8 +5,12 @@
 [resource]
 script = ExtResource("1_5xe8d")
 action_name = "Barricade"
-priority = 0
-power = 30
-ap_cost = 2
+priority = -1
+description = PackedStringArray("A wall of surrounding objects is built to protect those inside, but it takes a while.\nIncreases user Armor a lot.\nHas -1 Priority.")
+power = 80
+ap_cost = 3
 action_type = 3
 attack_type = 13
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

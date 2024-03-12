@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cekns0b0kwwsh"]
+
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="1_n0kew"]
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/monster_action_select.gd" id="2_4w6o3"]
+
+[node name="MonsterActionSelect" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.815686, 0.603922, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_n0kew")
+theme_override_font_sizes/font_size = 24
+toggle_mode = true
+text = "Select Action"
+script = ExtResource("2_4w6o3")

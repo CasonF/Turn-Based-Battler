@@ -1,0 +1,268 @@
+[gd_scene load_steps=7 format=3 uid="uid://buh7fqpdd4hvq"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_manager/monster_info_panel.gd" id="1_7dllt"]
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="1_7o1l6"]
+[ext_resource type="Texture2D" uid="uid://eouc7bneeo7c" path="res://game/assets/icons/i_burn.png" id="1_lbkt1"]
+[ext_resource type="Texture2D" uid="uid://bjgfpajlayney" path="res://game/assets/icons/i_freeze.png" id="2_a7w0b"]
+[ext_resource type="Texture2D" uid="uid://0cbn3b3322wi" path="res://game/assets/icons/i_poison.png" id="3_vmio2"]
+[ext_resource type="PackedScene" uid="uid://cml8e22h78hn1" path="res://game/scenes/ui/stat_stage_bar_pos.tscn" id="4_ody75"]
+
+[node name="MonsterInfoLabel" type="Label"]
+anchors_preset = -1
+anchor_right = 0.284
+anchor_bottom = 0.035
+offset_right = -0.167999
+offset_bottom = 0.32
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_7o1l6")
+theme_override_font_sizes/font_size = 24
+text = "Monster Name - Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_7dllt")
+
+[node name="InfoPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235
+anchor_top = -5.0
+anchor_right = 0.755
+anchor_bottom = -0.261
+offset_left = 0.154999
+offset_right = 0.114975
+offset_bottom = 0.00300026
+
+[node name="Status" type="Control" parent="InfoPanel"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.229
+offset_bottom = 0.0389977
+
+[node name="StatusLabel" type="Label" parent="InfoPanel/Status"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024
+anchor_right = 0.447
+anchor_bottom = 0.92
+offset_left = -0.0799999
+offset_right = 0.00999451
+theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_7o1l6")
+theme_override_font_sizes/font_size = 18
+text = "Statuses:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BurnControl" type="Control" parent="InfoPanel/Status"]
+layout_mode = 1
+anchor_left = 0.471
+anchor_right = 0.624
+anchor_bottom = 1.04
+offset_left = 2.93
+offset_right = 2.92
+
+[node name="BurnStatus" type="Sprite2D" parent="InfoPanel/Status/BurnControl"]
+modulate = Color(1, 1, 1, 0.184314)
+position = Vector2(13, 13)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_lbkt1")
+
+[node name="FreezeControl" type="Control" parent="InfoPanel/Status"]
+layout_mode = 1
+anchor_left = 0.635
+anchor_right = 0.788
+anchor_bottom = 1.04
+offset_left = 3.04999
+offset_right = 3.03999
+
+[node name="FreezeStatus" type="Sprite2D" parent="InfoPanel/Status/FreezeControl"]
+modulate = Color(1, 1, 1, 0.184314)
+position = Vector2(13, 13)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_a7w0b")
+
+[node name="PoisonControl" type="Control" parent="InfoPanel/Status"]
+layout_mode = 1
+anchor_left = 0.8
+anchor_right = 0.953
+anchor_bottom = 1.04
+offset_left = 3.0
+offset_right = 2.98999
+
+[node name="PoisonStatus" type="Sprite2D" parent="InfoPanel/Status/PoisonControl"]
+modulate = Color(1, 1, 1, 0.184314)
+position = Vector2(13, 13)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_vmio2")
+
+[node name="StatStages" type="Control" parent="InfoPanel"]
+layout_mode = 1
+anchor_top = 0.257
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.0130005
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.371
+anchor_top = -0.025
+anchor_right = 0.624
+anchor_bottom = 0.259
+offset_left = -0.0700035
+offset_top = 0.0250001
+offset_right = -0.0800018
+offset_bottom = 0.0209999
+theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_7o1l6")
+theme_override_font_sizes/font_size = 18
+text = "Stats:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ATKStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.222
+anchor_right = 0.324
+anchor_bottom = 0.432
+offset_left = 0.0599976
+offset_top = 0.0179977
+offset_right = -0.0800018
+offset_bottom = 0.00799942
+theme_override_font_sizes/font_size = 12
+text = "ATK"
+
+[node name="ATKStage" parent="InfoPanel/StatStages" instance=ExtResource("4_ody75")]
+layout_mode = 1
+anchor_left = 0.253
+anchor_top = 0.395
+anchor_right = 0.489
+anchor_bottom = 0.454
+offset_left = -0.0100021
+offset_top = 0.00499916
+offset_right = -13.322
+offset_bottom = -1.58801
+scale = Vector2(1.5, 1.5)
+
+[node name="DEFStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.676
+anchor_top = 0.222
+anchor_right = 0.818
+anchor_bottom = 0.432
+offset_left = 0.0799866
+offset_top = 0.0179977
+offset_right = -0.0599976
+offset_bottom = 0.00799942
+theme_override_font_sizes/font_size = 12
+text = "DEF"
+
+[node name="DEFStage" parent="InfoPanel/StatStages" instance=ExtResource("4_ody75")]
+layout_mode = 1
+anchor_left = 0.747
+anchor_top = 0.395
+anchor_right = 0.984
+anchor_bottom = 0.454
+offset_left = 0.0100098
+offset_top = 0.00499916
+offset_right = -13.472
+offset_bottom = -1.58801
+scale = Vector2(1.5, 1.5)
+stat_stage = 1
+
+[node name="MATKStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.457
+anchor_right = 0.353
+anchor_bottom = 0.667
+offset_left = -0.0100021
+offset_top = -0.0170021
+offset_right = -0.0100021
+offset_bottom = -0.0270042
+theme_override_font_sizes/font_size = 12
+text = "MATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MATKStage" parent="InfoPanel/StatStages" instance=ExtResource("4_ody75")]
+layout_mode = 1
+anchor_left = 0.253
+anchor_top = 0.63
+anchor_right = 0.489
+anchor_bottom = 0.689
+offset_left = -0.0100021
+offset_top = -0.0300026
+offset_right = -13.322
+offset_bottom = -1.623
+scale = Vector2(1.5, 1.5)
+stat_stage = 2
+
+[node name="MDEFStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.653
+anchor_top = 0.457
+anchor_right = 0.847
+anchor_bottom = 0.667
+offset_left = -0.0100098
+offset_top = -0.0170021
+offset_right = 0.00999451
+offset_bottom = -0.0270042
+theme_override_font_sizes/font_size = 12
+text = "MDEF"
+
+[node name="MDEFStage" parent="InfoPanel/StatStages" instance=ExtResource("4_ody75")]
+layout_mode = 1
+anchor_left = 0.747
+anchor_top = 0.63
+anchor_right = 0.984
+anchor_bottom = 0.689
+offset_left = 0.00999451
+offset_top = -0.0300026
+offset_right = -13.472
+offset_bottom = -1.623
+scale = Vector2(1.5, 1.5)
+stat_stage = 3
+
+[node name="SPDStageLabel" type="Label" parent="InfoPanel/StatStages"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.429
+anchor_top = 0.691
+anchor_right = 0.571
+anchor_bottom = 0.901
+offset_left = 0.0699997
+offset_top = 0.0289955
+offset_right = -0.0700073
+offset_bottom = 0.0189972
+theme_override_font_sizes/font_size = 12
+text = "SPD"
+
+[node name="SPDStage" parent="InfoPanel/StatStages" instance=ExtResource("4_ody75")]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.864
+anchor_right = 0.737
+anchor_bottom = 0.923
+offset_top = 0.0159988
+offset_right = -13.482
+offset_bottom = -1.577
+scale = Vector2(1.5, 1.5)
+stat_stage = 4
+
+[connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_mouse_exited"]

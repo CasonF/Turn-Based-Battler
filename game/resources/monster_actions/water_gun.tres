@@ -5,7 +5,12 @@
 [resource]
 script = ExtResource("1_r1ade")
 action_name = "Water Gun"
+priority = 0
+description = PackedStringArray("A burst of water shoots forth from the user at deadly speeds.")
 power = 40
 ap_cost = 0
 action_type = 1
 attack_type = 6
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

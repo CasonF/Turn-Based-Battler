@@ -1,26 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://duqtnl2mdxfn3"]
+[gd_scene load_steps=11 format=3 uid="uid://duqtnl2mdxfn3"]
 
 [ext_resource type="Script" path="res://game/scripts/ui/battle_setup/battle_setup.gd" id="1_lljos"]
 [ext_resource type="PackedScene" uid="uid://dusao4rbugdj3" path="res://game/scenes/ui/stat_display.tscn" id="2_1hfhx"]
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="2_iakus"]
 [ext_resource type="Texture2D" uid="uid://bawlfq0hyol0p" path="res://game/assets/backgrounds/intense_lens_flare_by_shadow624_d6asawj-fullview.png" id="3_2cq0i"]
 [ext_resource type="AudioStream" uid="uid://byn5dd1n3vlpc" path="res://game/audio/music/AlexiAction/fashion-background-127572.mp3" id="3_h0x6o"]
+[ext_resource type="PackedScene" uid="uid://wksoeflt2w33" path="res://game/scenes/ui/team_monster_select.tscn" id="3_w4j2j"]
+[ext_resource type="Texture2D" uid="uid://ng4tuvo2tgb1" path="res://game/assets/monster_team_frame.png" id="4_hodwo"]
 [ext_resource type="PackedScene" uid="uid://ucnemiv7rscc" path="res://game/scenes/ui/select_screen_background.tscn" id="4_immj0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bv4nf"]
 blend_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvac5"]
+bg_color = Color(0, 0, 0, 0.431373)
 
 [node name="BattleSetup" type="Node" node_paths=PackedStringArray("music_player")]
 script = ExtResource("1_lljos")
 music_player = NodePath("AudioStreamPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = -1
-anchor_left = -0.5
-anchor_top = -0.5
-anchor_right = -0.259
-anchor_bottom = 0.5
+anchor_right = 0.241
+anchor_bottom = 1.0
 offset_right = 0.368011
 
 [node name="MonsterScrollLabel" type="Label" parent="Panel"]
@@ -30,7 +35,10 @@ anchor_right = 1.0
 anchor_bottom = 0.065
 offset_right = -3.05176e-05
 offset_bottom = -0.120003
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 32
 text = "Select a Monster"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -58,10 +66,14 @@ anchor_right = 1.0
 anchor_bottom = 0.579
 offset_top = -0.0160217
 offset_bottom = -0.192047
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.513726, 0.960784, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 32
 text = "Add to Party"
 
-[node name="RemoveFromPlayerParty" type="Button" parent="Panel"]
+[node name="ClearPlayerParty" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.921
@@ -70,8 +82,11 @@ anchor_bottom = 1.0
 offset_top = 0.191956
 offset_right = -3.05176e-05
 theme_override_colors/font_color = Color(0.854902, 0.356863, 0.223529, 1)
-theme_override_font_sizes/font_size = 20
-text = "Remove from Party"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 32
+text = "Clear Player Party"
 
 [node name="PlayerParty" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -84,14 +99,63 @@ offset_right = -3.05176e-05
 offset_bottom = -0.216064
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+
+[node name="PartyRow1" type="HBoxContainer" parent="Panel/PlayerParty"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Border1st" type="Sprite2D" parent="Panel/PlayerParty/PartyRow1"]
+self_modulate = Color(1, 0.639216, 0, 1)
+position = Vector2(68.5, 50.0001)
+scale = Vector2(1.42708, 1.0625)
+texture = ExtResource("4_hodwo")
+
+[node name="Border2nd" type="Sprite2D" parent="Panel/PlayerParty/PartyRow1"]
+self_modulate = Color(0.533333, 0.533333, 0.533333, 1)
+position = Vector2(209.5, 50.0001)
+scale = Vector2(1.42708, 1.0625)
+texture = ExtResource("4_hodwo")
+
+[node name="TeamMonsterSelect" parent="Panel/PlayerParty/PartyRow1" instance=ExtResource("3_w4j2j")]
+layout_mode = 2
+icon = null
+
+[node name="TeamMonsterSelect2" parent="Panel/PlayerParty/PartyRow1" instance=ExtResource("3_w4j2j")]
+layout_mode = 2
+icon = null
+
+[node name="PartyRow2" type="HBoxContainer" parent="Panel/PlayerParty"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Border3rd" type="Sprite2D" parent="Panel/PlayerParty/PartyRow2"]
+self_modulate = Color(0.533333, 0.533333, 0.533333, 1)
+position = Vector2(68.5, 51.0001)
+scale = Vector2(1.42708, 1.0625)
+texture = ExtResource("4_hodwo")
+
+[node name="Border4th" type="Sprite2D" parent="Panel/PlayerParty/PartyRow2"]
+self_modulate = Color(0.533333, 0.533333, 0.533333, 1)
+position = Vector2(209.5, 51.0001)
+scale = Vector2(1.42708, 1.0625)
+texture = ExtResource("4_hodwo")
+
+[node name="TeamMonsterSelect" parent="Panel/PlayerParty/PartyRow2" instance=ExtResource("3_w4j2j")]
+layout_mode = 2
+icon = null
+
+[node name="TeamMonsterSelect2" parent="Panel/PlayerParty/PartyRow2" instance=ExtResource("3_w4j2j")]
+layout_mode = 2
+icon = null
 
 [node name="MonsterStatsPanel" type="Panel" parent="."]
 anchors_preset = -1
-anchor_left = 0.219
-anchor_top = -0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -0.28801
+anchor_left = 0.719
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.288025
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="MonsterStatsPanel"]
 layout_mode = 1
@@ -135,7 +199,10 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.565
 offset_bottom = -0.119995
-theme_override_font_sizes/font_size = 24
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 32
 text = "Select Enemy Team"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -147,37 +214,119 @@ anchor_top = 0.921
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 0.191956
-theme_override_colors/font_color = Color(0.972549, 0.756863, 0.219608, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.854902, 0.356863, 0.223529, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 32
 text = "Start Combat"
 
 [node name="MonserSpriteScaler" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
 
 [node name="MonsterSpotlight" type="Sprite2D" parent="MonserSpriteScaler"]
 visible = false
 modulate = Color(1, 1, 0, 0.509804)
 material = SubResource("CanvasItemMaterial_bv4nf")
-position = Vector2(543, 324)
+position = Vector2(543, 236)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_2cq0i")
 
 [node name="MonsterSprite" type="Sprite2D" parent="MonserSpriteScaler"]
-position = Vector2(543, 324)
+position = Vector2(543, 236)
 scale = Vector2(3, 3)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_h0x6o")
+volume_db = -10.0
 autoplay = true
 
 [node name="SelectScreenBackground" parent="." instance=ExtResource("4_immj0")]
 
+[node name="MonsterSelectionPanel" type="Panel" parent="."]
+offset_left = 278.0
+offset_top = 387.0
+offset_right = 828.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cvac5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MonsterSelectionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectAbilityLabel" type="Label" parent="MonsterSelectionPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 28
+text = "Select Monster Ability"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AblityList" type="HBoxContainer" parent="MonsterSelectionPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ComingSoon" type="Label" parent="MonsterSelectionPanel/VBoxContainer/AblityList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.764706, 0.207843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 24
+text = "Coming Soon..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectActionsLabel" type="Label" parent="MonsterSelectionPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 28
+text = "Select Monster Attacks"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MonsterActionList" type="ScrollContainer" parent="MonsterSelectionPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="MonsterSelectionPanel/VBoxContainer/MonsterActionList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ActionDescriptionScroll" type="ScrollContainer" parent="MonsterSelectionPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ActionDescription" type="Label" parent="MonsterSelectionPanel/VBoxContainer/ActionDescriptionScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.992157, 0.784314, 0.443137, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_iakus")
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
 [connection signal="pressed" from="Panel/AddToPlayerParty" to="." method="_add_monster_to_player_party"]
-[connection signal="pressed" from="Panel/RemoveFromPlayerParty" to="." method="_remove_monster_from_player_party"]
+[connection signal="pressed" from="Panel/ClearPlayerParty" to="." method="_clear_player_party"]
 [connection signal="pressed" from="MonsterStatsPanel/StartCombat" to="." method="load_battle_scene"]

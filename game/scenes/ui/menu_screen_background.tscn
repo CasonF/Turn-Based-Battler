@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0diktstjvmmb"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/battle_select_background.gd" id="1_eqegn"]
+[ext_resource type="Texture2D" uid="uid://4rrid3hk5p6p" path="res://game/assets/backgrounds/parallax_mountaintop/background1.png" id="2_1exck"]
+[ext_resource type="Texture2D" uid="uid://40hepbsd5wn2" path="res://game/assets/backgrounds/parallax_mountaintop/cloud1.png" id="3_etl3q"]
+[ext_resource type="Texture2D" uid="uid://7u1vfmfv013j" path="res://game/assets/backgrounds/parallax_mountaintop/cloud3.png" id="4_3qwts"]
+[ext_resource type="Texture2D" uid="uid://cdlc7twujmgln" path="res://game/assets/backgrounds/parallax_mountaintop/background2.png" id="5_0n4fx"]
+[ext_resource type="Texture2D" uid="uid://cg0ktq0itplww" path="res://game/assets/backgrounds/parallax_mountaintop/cloud2.png" id="6_5oown"]
+[ext_resource type="Texture2D" uid="uid://ynaanwg581rm" path="res://game/assets/backgrounds/parallax_mountaintop/background3.png" id="7_7su5r"]
+
+[node name="SelectScreenBackground" type="ParallaxBackground"]
+scroll_offset = Vector2(500, 0)
+
+[node name="MovingBackground" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1673, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingBackground"]
+scale = Vector2(2.615, 2.5)
+texture = ExtResource("2_1exck")
+centered = false
+
+[node name="MovingCloud1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1720, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingCloud1"]
+modulate = Color(1, 1, 1, 0.568627)
+position = Vector2(200, 600)
+scale = Vector2(4, 3.824)
+texture = ExtResource("3_etl3q")
+centered = false
+
+[node name="MovingCloud2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.75, 0.75)
+motion_mirroring = Vector2(1720, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingCloud2"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(-300, 450)
+scale = Vector2(5, 4.78)
+texture = ExtResource("4_3qwts")
+centered = false
+
+[node name="MovingBackground2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.75, 0.75)
+motion_mirroring = Vector2(1673, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingBackground2"]
+scale = Vector2(2.615, 2.5)
+texture = ExtResource("5_0n4fx")
+centered = false
+
+[node name="MovingCloud3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.85, 0.85)
+motion_mirroring = Vector2(1720, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 6.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingCloud3"]
+position = Vector2(500, 150)
+scale = Vector2(5, 4.78)
+texture = ExtResource("6_5oown")
+centered = false
+
+[node name="MovingBackground3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1673, 0)
+script = ExtResource("1_eqegn")
+BACKGROUND_SPEED = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingBackground3"]
+scale = Vector2(2.615, 2.5)
+texture = ExtResource("7_7su5r")
+centered = false

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=16 format=3 uid="uid://byb4h0pvqij0c"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_bydrc"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="1_m71ik"]
+[ext_resource type="Resource" uid="uid://bbyqkyxx27ghl" path="res://game/resources/monster_actions/shooting_star.tres" id="2_gcm31"]
+[ext_resource type="Resource" uid="uid://3eby30qh6j26" path="res://game/resources/monster_actions/snarl.tres" id="3_rqo82"]
+[ext_resource type="Resource" uid="uid://wai13nhlc2lx" path="res://game/resources/monster_actions/embers.tres" id="4_4spv3"]
+[ext_resource type="Resource" uid="uid://c0afxrend5wvl" path="res://game/resources/monster_actions/bomb.tres" id="5_cr8ee"]
+[ext_resource type="Texture2D" uid="uid://csapywh6htv5e" path="res://game/assets/Sprites (Battlers) 2x/48_boss_xx.png" id="5_yv83a"]
+[ext_resource type="Resource" uid="uid://b6604iy4wwiub" path="res://game/resources/monster_actions/fireball.tres" id="6_3axbs"]
+[ext_resource type="Resource" uid="uid://d3fnw662yabbk" path="res://game/resources/monster_actions/fireworks.tres" id="7_uxabk"]
+[ext_resource type="Resource" uid="uid://buhn7ft5bgrrm" path="res://game/resources/monster_actions/gust.tres" id="8_gn1b7"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="9_j07qw"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="10_nxfps"]
+[ext_resource type="Resource" uid="uid://whni487rpbmm" path="res://game/resources/monster_actions/supernova.tres" id="11_48xkc"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="12_nxu6w"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="13_cqj8i"]
+
+[resource]
+script = ExtResource("1_bydrc")
+monster_name = "Infernus"
+is_monster_leader = true
+default_direction_left = false
+sprite = ExtResource("5_yv83a")
+hp = 65
+atk = 85
+def = 60
+matk = 130
+mdef = 65
+spd = 110
+xp_yield = 189
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_m71ik"), ExtResource("2_gcm31"), ExtResource("3_rqo82"), ExtResource("4_4spv3")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_m71ik"), ExtResource("5_cr8ee"), ExtResource("4_4spv3"), ExtResource("6_3axbs"), ExtResource("7_uxabk"), ExtResource("8_gn1b7"), ExtResource("9_j07qw"), ExtResource("2_gcm31"), ExtResource("10_nxfps"), ExtResource("3_rqo82"), ExtResource("11_48xkc"), ExtResource("12_nxu6w"), ExtResource("13_cqj8i")])
+y_offset = 0.0

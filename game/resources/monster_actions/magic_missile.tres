@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=3 format=3 uid="uid://y34i7dx4whpr"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_u2si6"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="1_vo4c7"]
+
+[resource]
+script = ExtResource("1_u2si6")
+action_name = "Magic Missile"
+priority = 0
+description = PackedStringArray("The user unleashes a flurry of arcane spears at the target.\nThe user attacks with Arcane Bolt 2-3 times.")
+power = 40
+ap_cost = 2
+action_type = 1
+attack_type = 4
+action_effect = 0
+multi_attack = true
+multi_attack_action = ExtResource("1_vo4c7")
+range = Array[int]([2, 2, 2, 2, 2, 2, 3, 3, 3, 3])

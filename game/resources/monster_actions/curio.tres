@@ -6,7 +6,11 @@
 script = ExtResource("1_sxu28")
 action_name = "Curio"
 priority = 0
-power = 30
+description = PackedStringArray("The user chants a moderate healing spell to recover some of their lost vitality.\nIncreases user HP a moderate amount.")
+power = 60
 ap_cost = 2
 action_type = 2
 attack_type = 12
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

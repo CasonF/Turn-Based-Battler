@@ -6,8 +6,11 @@
 script = ExtResource("1_vjo0r")
 action_name = "Meditate"
 priority = 0
+description = PackedStringArray("By blocking out the noise of the world, the user grows more attuned to their magical powers.\nRaises user MATK by 1 stage.")
 power = 0
 ap_cost = 0
 action_type = 3
 attack_type = 0
 action_effect = 2
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

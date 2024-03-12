@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://brg0odd88hlsb"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_1g5sd"]
+
+[resource]
+script = ExtResource("1_1g5sd")
+action_name = "Mind Seal"
+priority = 0
+description = PackedStringArray("The enemy\'s mind is sealed, greatly reducing their magical potential.\nLowers target MATK by 2 stages.")
+power = 0
+ap_cost = 2
+action_type = 3
+attack_type = 0
+action_effect = 20
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

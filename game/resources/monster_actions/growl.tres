@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bbcv6jo5eieie"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_57el4"]
+
+[resource]
+script = ExtResource("1_57el4")
+action_name = "Growl"
+priority = 0
+description = PackedStringArray("The user growls menacingly at the opponent, causing them to flinch in fear and get weaker.\nLowers target ATK by 1 stage.")
+power = 0
+ap_cost = 0
+action_type = 3
+attack_type = 0
+action_effect = 5
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

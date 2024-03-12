@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://doyr4n2xokam4"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_yqw52"]
+
+[resource]
+script = ExtResource("1_yqw52")
+action_name = "Windrush"
+priority = 0
+description = PackedStringArray("The wind pushes at the user\'s back, increasing their speed as they charge straight towards the target.\nRaises user SPD by 1 stage.")
+power = 40
+ap_cost = 1
+action_type = 0
+attack_type = 8
+action_effect = 3
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

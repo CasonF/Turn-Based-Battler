@@ -6,7 +6,11 @@
 script = ExtResource("1_1ff6e")
 action_name = "Fireball"
 priority = 0
+description = PackedStringArray("A giant ball of fire and brimstone is hurled at the opponent.")
 power = 80
 ap_cost = 2
 action_type = 1
 attack_type = 5
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

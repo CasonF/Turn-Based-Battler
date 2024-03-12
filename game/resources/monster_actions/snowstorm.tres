@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://dvtywt12jqw4k"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_pokex"]
+
+[resource]
+script = ExtResource("1_pokex")
+action_name = "Snowstorm"
+priority = 0
+description = PackedStringArray("The enemy is pelted by neverending snow and cold, slowing them down and freezing them.")
+power = 100
+ap_cost = 3
+action_type = 1
+attack_type = 7
+action_effect = 31
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

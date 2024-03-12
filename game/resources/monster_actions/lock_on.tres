@@ -6,8 +6,11 @@
 script = ExtResource("1_f1wxf")
 action_name = "Lock On"
 priority = 0
+description = PackedStringArray("The user hones in on their target, disregarding any dangers around them.\nRaises user ATK and MATK by 1 stage.\nLowers user DEF and MDEF by 1 stage.")
 power = 0
 ap_cost = 0
 action_type = 3
 attack_type = 0
 action_effect = 4
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

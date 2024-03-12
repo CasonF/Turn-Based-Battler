@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://ckwx5vlwwhvt8"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_j4t0k"]
+
+[resource]
+script = ExtResource("1_j4t0k")
+action_name = "Tsunami"
+priority = 0
+description = PackedStringArray("An immense wave of water crashes into the foe. Its allies also take some damage.")
+power = 120
+ap_cost = 4
+action_type = 1
+attack_type = 6
+action_effect = 35
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

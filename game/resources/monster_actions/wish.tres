@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://b36npoyl1o4p0"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_u3jaa"]
+
+[resource]
+script = ExtResource("1_u3jaa")
+action_name = "Wish"
+priority = 0
+description = PackedStringArray("The user wishes upon a star to heal themself or their allies...\nHeals active monster by 1/4 max HP in two turns.")
+power = 0
+ap_cost = 1
+action_type = 3
+attack_type = 12
+action_effect = 13
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

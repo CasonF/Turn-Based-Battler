@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=18 format=3 uid="uid://6e03wjh371f"]
+
+[ext_resource type="Resource" uid="uid://bnayrt1fqybtl" path="res://game/resources/monster_actions/chain_lightning.tres" id="1_3vc7b"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_wnsn6"]
+[ext_resource type="Resource" uid="uid://buhn7ft5bgrrm" path="res://game/resources/monster_actions/gust.tres" id="2_ltisp"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="3_4so3r"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="4_8edni"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="5_6d8pk"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="6_2yrvm"]
+[ext_resource type="Texture2D" uid="uid://cwuiiddbqphxj" path="res://game/assets/Sprites (Battlers) 2x/49_minion_01_xx.png" id="6_l8kcm"]
+[ext_resource type="Resource" uid="uid://crp0wcvi7fn28" path="res://game/resources/monster_actions/charge_beam.tres" id="7_obl1n"]
+[ext_resource type="Resource" uid="uid://d11ojpf8sfh1s" path="res://game/resources/monster_actions/frostburn.tres" id="8_hi1uo"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="9_artdw"]
+[ext_resource type="Resource" uid="uid://cn15t6daicp37" path="res://game/resources/monster_actions/hurricane.tres" id="10_m5m4w"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="11_4gujs"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="12_75gec"]
+[ext_resource type="Resource" uid="uid://dvtywt12jqw4k" path="res://game/resources/monster_actions/snowstorm.tres" id="13_v3re8"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="14_k5747"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="15_8s6n6"]
+
+[resource]
+script = ExtResource("1_wnsn6")
+monster_name = "Gustus"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("6_l8kcm")
+hp = 50
+atk = 50
+def = 50
+matk = 85
+mdef = 70
+spd = 100
+xp_yield = 72
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_3vc7b"), ExtResource("2_ltisp"), ExtResource("3_4so3r"), ExtResource("4_8edni")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_6d8pk"), ExtResource("6_2yrvm"), ExtResource("1_3vc7b"), ExtResource("7_obl1n"), ExtResource("8_hi1uo"), ExtResource("9_artdw"), ExtResource("2_ltisp"), ExtResource("10_m5m4w"), ExtResource("11_4gujs"), ExtResource("12_75gec"), ExtResource("3_4so3r"), ExtResource("13_v3re8"), ExtResource("14_k5747"), ExtResource("15_8s6n6")])
+y_offset = 0.0

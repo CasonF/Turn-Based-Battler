@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://cgvabmpdlvv7c"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_itf4j"]
+
+[resource]
+script = ExtResource("1_itf4j")
+action_name = "Web Sling"
+priority = 0
+description = PackedStringArray("A sticky ball of web is launched at the foe, slowing them down greatly.\nLowers target SPD by 2 stages.")
+power = 30
+ap_cost = 1
+action_type = 1
+attack_type = 11
+action_effect = 16
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

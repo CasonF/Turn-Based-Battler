@@ -6,7 +6,11 @@
 script = ExtResource("1_ccota")
 action_name = "Cure"
 priority = 0
-power = 15
+description = PackedStringArray("The user chants a weak healing spell to recover some of their lost vitality.\nIncreases user HP a little.")
+power = 30
 ap_cost = 1
 action_type = 2
 attack_type = 12
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

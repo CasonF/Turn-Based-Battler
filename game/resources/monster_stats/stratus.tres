@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=17 format=3 uid="uid://dcv8f820ly3na"]
+
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="1_3g2lx"]
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_pifqd"]
+[ext_resource type="Resource" uid="uid://buhn7ft5bgrrm" path="res://game/resources/monster_actions/gust.tres" id="2_4glu5"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="3_oblnc"]
+[ext_resource type="Resource" uid="uid://cn15t6daicp37" path="res://game/resources/monster_actions/hurricane.tres" id="4_8okov"]
+[ext_resource type="Texture2D" uid="uid://cin4sb31xqhat" path="res://game/assets/Sprites (Battlers) 2x/49_boss_xx.png" id="5_240qy"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="5_gtlq2"]
+[ext_resource type="Resource" uid="uid://bnayrt1fqybtl" path="res://game/resources/monster_actions/chain_lightning.tres" id="6_3irpx"]
+[ext_resource type="Resource" uid="uid://crp0wcvi7fn28" path="res://game/resources/monster_actions/charge_beam.tres" id="7_526s5"]
+[ext_resource type="Resource" uid="uid://d11ojpf8sfh1s" path="res://game/resources/monster_actions/frostburn.tres" id="8_y4dyk"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="9_wyosr"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="10_kfnr0"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="11_uv505"]
+[ext_resource type="Resource" uid="uid://dvtywt12jqw4k" path="res://game/resources/monster_actions/snowstorm.tres" id="12_4shqe"]
+[ext_resource type="Resource" uid="uid://ckwx5vlwwhvt8" path="res://game/resources/monster_actions/tsunami.tres" id="13_gduis"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="14_yfdgr"]
+
+[resource]
+script = ExtResource("1_pifqd")
+monster_name = "Stratus"
+is_monster_leader = true
+default_direction_left = false
+sprite = ExtResource("5_240qy")
+hp = 65
+atk = 60
+def = 65
+matk = 110
+mdef = 85
+spd = 130
+xp_yield = 176
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_3g2lx"), ExtResource("2_4glu5"), ExtResource("3_oblnc"), ExtResource("4_8okov")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_3g2lx"), ExtResource("5_gtlq2"), ExtResource("6_3irpx"), ExtResource("7_526s5"), ExtResource("8_y4dyk"), ExtResource("2_4glu5"), ExtResource("4_8okov"), ExtResource("9_wyosr"), ExtResource("10_kfnr0"), ExtResource("11_uv505"), ExtResource("12_4shqe"), ExtResource("3_oblnc"), ExtResource("13_gduis"), ExtResource("14_yfdgr")])
+y_offset = 0.0

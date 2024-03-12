@@ -6,7 +6,11 @@
 script = ExtResource("1_q8a4i")
 action_name = "Withdraw"
 priority = 0
-power = 20
-ap_cost = 1
+description = PackedStringArray("The user quickly retreats into their shell or behind cover to reduce incoming damage.\nIncrease user Armor a little.\nHas +1 Priority.")
+power = 30
+ap_cost = 2
 action_type = 3
 attack_type = 13
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

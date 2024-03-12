@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bwq4t8jxqora1"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_1pwou"]
+
+[resource]
+script = ExtResource("1_1pwou")
+action_name = "Glacial Crush"
+priority = 0
+description = PackedStringArray("A glacier is summoned to slam into the target.")
+power = 150
+ap_cost = 3
+action_type = 0
+attack_type = 7
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

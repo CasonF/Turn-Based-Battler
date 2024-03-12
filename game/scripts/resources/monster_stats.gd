@@ -9,6 +9,7 @@ enum level_rate {
 
 @export var monster_name : String
 @export var is_monster_leader : bool = false
+@export var default_direction_left : bool = false
 
 @export_category("Monster Sprite")
 @export var sprite : Texture2D
@@ -27,6 +28,7 @@ enum level_rate {
 
 @export_category("Monster Actions")
 @export var actions : Array[MonsterAction] = []
+@export var knowable_actions : Array[MonsterAction] = []
 
 @export_category("Position Offsets")
 @export var y_offset : float = 0.0

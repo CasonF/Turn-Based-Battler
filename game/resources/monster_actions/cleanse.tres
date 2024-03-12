@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://colybaheufvat"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_5yam8"]
+
+[resource]
+script = ExtResource("1_5yam8")
+action_name = "Cleanse"
+priority = 0
+description = PackedStringArray("The restoring wave of magic washes over the user, healing all status conditions.")
+power = 0
+ap_cost = 1
+action_type = 1
+attack_type = 0
+action_effect = 30
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

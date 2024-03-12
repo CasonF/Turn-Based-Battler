@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=16 format=3 uid="uid://dnbu1qn56jmbo"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_ls6xh"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="1_xsfhk"]
+[ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="2_bl7ev"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="3_cf5tt"]
+[ext_resource type="Resource" uid="uid://colybaheufvat" path="res://game/resources/monster_actions/cleanse.tres" id="4_kain6"]
+[ext_resource type="Texture2D" uid="uid://ciermtsjslqhk" path="res://game/assets/Sprites (Battlers) 2x/33_minion_04_xx.png" id="5_umwfa"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_wfwbj"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="6_scj36"]
+[ext_resource type="Resource" uid="uid://21rp0rgfq7sn" path="res://game/resources/monster_actions/draining_tendrils.tres" id="7_d7ps7"]
+[ext_resource type="Resource" uid="uid://b8tjjscg7lqd6" path="res://game/resources/monster_actions/meditate.tres" id="8_p7dqn"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="9_dpjqy"]
+[ext_resource type="Resource" uid="uid://b5qm1eyo42ebw" path="res://game/resources/monster_actions/ointment.tres" id="10_d5dpy"]
+[ext_resource type="Resource" uid="uid://dfrrfxmx5dr81" path="res://game/resources/monster_actions/punch.tres" id="11_jrpyc"]
+[ext_resource type="Resource" uid="uid://3akb1h7v3at8" path="res://game/resources/monster_actions/synthesis.tres" id="12_qycjv"]
+[ext_resource type="Resource" uid="uid://bixwe85sdqupk" path="res://game/resources/monster_actions/toxin.tres" id="13_vqx0h"]
+
+[resource]
+script = ExtResource("1_ls6xh")
+monster_name = "Chillroot"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("5_umwfa")
+hp = 64
+atk = 74
+def = 74
+matk = 58
+mdef = 58
+spd = 48
+xp_yield = 78
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_xsfhk"), ExtResource("2_bl7ev"), ExtResource("3_cf5tt"), ExtResource("4_kain6")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_xsfhk"), ExtResource("5_wfwbj"), ExtResource("4_kain6"), ExtResource("6_scj36"), ExtResource("2_bl7ev"), ExtResource("7_d7ps7"), ExtResource("8_p7dqn"), ExtResource("9_dpjqy"), ExtResource("10_d5dpy"), ExtResource("11_jrpyc"), ExtResource("12_qycjv"), ExtResource("3_cf5tt"), ExtResource("13_vqx0h")])
+y_offset = 0.0

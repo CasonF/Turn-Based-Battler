@@ -6,7 +6,11 @@
 script = ExtResource("1_ylp6t")
 action_name = "Water Whip"
 priority = 0
+description = PackedStringArray("A lash of water is used to whip at the opponent from afar.")
 power = 55
 ap_cost = 0
 action_type = 1
 attack_type = 6
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

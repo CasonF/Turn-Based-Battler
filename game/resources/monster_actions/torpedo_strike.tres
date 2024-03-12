@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://co4oujqiupyqn"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_mwhp3"]
+
+[resource]
+script = ExtResource("1_mwhp3")
+action_name = "Torpedo Strike"
+priority = 1
+description = PackedStringArray("The user rushes forth from the water, emerging and striking the foe with terrifying speeds.\nHas +1 Priority.")
+power = 40
+ap_cost = 0
+action_type = 0
+attack_type = 6
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

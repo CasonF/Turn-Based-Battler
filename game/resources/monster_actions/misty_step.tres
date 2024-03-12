@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://blhe1kksmxcr6"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_e0s3r"]
+
+[resource]
+script = ExtResource("1_e0s3r")
+action_name = "Misty Step"
+priority = 0
+description = PackedStringArray("The cloud of fog forms behind the user, giving them a slight boost of speed and shrouding them from damage.\nRaises user SPD by 1 stage.")
+power = 30
+ap_cost = 2
+action_type = 3
+attack_type = 13
+action_effect = 3
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

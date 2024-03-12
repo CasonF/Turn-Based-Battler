@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1qwids64m2ji"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/main_menu/main_menu.gd" id="1_jcqc0"]
+[ext_resource type="AudioStream" uid="uid://cdk6rsrofmf54" path="res://game/audio/music/HEROICCC(chosic.com).mp3" id="1_ufd42"]
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="1_xu8gn"]
+[ext_resource type="PackedScene" uid="uid://d0diktstjvmmb" path="res://game/scenes/ui/menu_screen_background.tscn" id="2_6gay2"]
+[ext_resource type="PackedScene" uid="uid://djkd22roj1rox" path="res://game/scenes/ui/options_menu.tscn" id="3_sfmvb"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_jcqc0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Title" type="RichTextLabel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.286
+anchor_top = 0.125
+anchor_right = 0.714
+anchor_bottom = 0.25
+offset_left = 0.527985
+offset_top = -1.52588e-05
+offset_right = -0.528076
+theme_override_colors/font_shadow_color = Color(0.32549, 0.639216, 0.803922, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_xu8gn")
+theme_override_font_sizes/normal_font_size = 80
+text = "Monster Battler"
+fit_content = true
+
+[node name="StartGame" type="Button" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405
+anchor_top = 0.454
+anchor_right = 0.595
+anchor_bottom = 0.548
+offset_left = -0.560028
+offset_top = -0.192017
+offset_right = 0.559937
+offset_bottom = -0.104034
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.964706, 0.819608, 0.654902, 1)
+theme_override_colors/font_outline_color = Color(0.407843, 0.709804, 0.87451, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_xu8gn")
+theme_override_font_sizes/font_size = 52
+text = "Start Game"
+flat = true
+
+[node name="Options" type="Button" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405
+anchor_top = 0.554
+anchor_right = 0.595
+anchor_bottom = 0.648
+offset_left = -0.560028
+offset_top = 0.00799561
+offset_right = 0.559937
+offset_bottom = 0.0960083
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.964706, 0.819608, 0.654902, 1)
+theme_override_colors/font_outline_color = Color(0.407843, 0.709804, 0.87451, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_xu8gn")
+theme_override_font_sizes/font_size = 52
+text = "Options"
+flat = true
+
+[node name="ExitGame" type="Button" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.405
+anchor_top = 0.654
+anchor_right = 0.595
+anchor_bottom = 0.748
+offset_left = -0.560028
+offset_top = 0.207977
+offset_right = 0.559937
+offset_bottom = 0.29599
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.964706, 0.819608, 0.654902, 1)
+theme_override_colors/font_outline_color = Color(0.407843, 0.709804, 0.87451, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_xu8gn")
+theme_override_font_sizes/font_size = 52
+text = "Exit"
+flat = true
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_sfmvb")]
+visible = false
+offset_left = -215.0
+offset_top = -253.0
+offset_right = -215.0
+offset_bottom = -253.088
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ufd42")
+volume_db = -10.0
+autoplay = true
+
+[node name="SelectScreenBackground" parent="." instance=ExtResource("2_6gay2")]
+offset = Vector2(-640, -640)
+transform = Transform2D(1, 0, 0, 1, -640, -640)
+
+[connection signal="pressed" from="Main/StartGame" to="." method="_start_game"]
+[connection signal="pressed" from="Main/Options" to="." method="_open_options"]
+[connection signal="pressed" from="Main/ExitGame" to="." method="_exit_game"]

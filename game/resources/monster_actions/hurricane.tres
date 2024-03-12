@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://cn15t6daicp37"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_eyb54"]
+
+[resource]
+script = ExtResource("1_eyb54")
+action_name = "Hurricane"
+priority = 0
+description = PackedStringArray("Torrential rains and winds knock the foe around, completely knocking their sense of direction out of whack.\nShuffles target stat changes.")
+power = 120
+ap_cost = 3
+action_type = 1
+attack_type = 8
+action_effect = 25
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

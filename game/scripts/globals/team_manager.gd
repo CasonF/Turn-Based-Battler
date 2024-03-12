@@ -4,7 +4,7 @@ extends Node
 static var PLAYER_TEAM : Array[Monster] = []
 static var ENEMY_TEAM : Array[Monster] = []
 
-static func add_player_leader(leader: MonsterStats, level: int = 1) -> bool:
+static func add_player_leader(leader: MonsterStats, level: int = 1, action_array: Array[MonsterAction] = []) -> bool:
 	var add_success := true
 	var current_leader : Monster
 	for member in PLAYER_TEAM:
@@ -17,6 +17,8 @@ static func add_player_leader(leader: MonsterStats, level: int = 1) -> bool:
 		remove_player_monster(current_leader)
 		team_leader.current_hp = team_leader.HP
 		team_leader.armor = 0
+		if action_array.size() > 0:
+			team_leader.known_actions = action_array
 		PLAYER_TEAM.append(team_leader)
 	else:
 		if PLAYER_TEAM.size() == 4:
@@ -26,10 +28,12 @@ static func add_player_leader(leader: MonsterStats, level: int = 1) -> bool:
 			var team_leader : Monster = Monster.create(leader.monster_name, level)
 			team_leader.current_hp = team_leader.HP
 			team_leader.armor = 0
+			if action_array.size() > 0:
+				team_leader.known_actions = action_array
 			PLAYER_TEAM.append(team_leader)
 	return add_success
 
-static func add_player_monster(monster: MonsterStats, level: int = 1) -> bool:
+static func add_player_monster(monster: MonsterStats, level: int = 1, action_array: Array[MonsterAction] = []) -> bool:
 	var add_success := true
 	if PLAYER_TEAM.size() == 4:
 		# Team cannot exceed 4 members
@@ -38,12 +42,22 @@ static func add_player_monster(monster: MonsterStats, level: int = 1) -> bool:
 		var team_member: Monster = Monster.create(monster.monster_name, level)
 		team_member.current_hp = team_member.HP
 		team_member.armor = 0
+		if action_array.size() > 0:
+			team_member.known_actions = action_array
 		PLAYER_TEAM.append(team_member)
 	return add_success
+
+static func clean_player_team() -> void:
+	for mon:Monster in PLAYER_TEAM:
+		mon.active_statuses.clear()
 
 static func remove_player_monster(monster: Monster) -> void:
 	if PLAYER_TEAM.has(monster):
 		PLAYER_TEAM.remove_at(PLAYER_TEAM.find(monster))
+
+static func clear_player_party() -> void:
+	if PLAYER_TEAM.size() > 0:
+		PLAYER_TEAM.clear()
 
 static func set_enemy_team(team: Array[MonsterStats], team_level: int = 20) -> void:
 	ENEMY_TEAM.clear()

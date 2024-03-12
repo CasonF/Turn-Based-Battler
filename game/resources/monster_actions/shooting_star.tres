@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bbyqkyxx27ghl"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_xkv7h"]
+
+[resource]
+script = ExtResource("1_xkv7h")
+action_name = "Shooting Star"
+priority = 0
+description = PackedStringArray("A shooting star is summoned from the heavens, crashing down on the target and empowering the summoner.\nRaises random user stat by 1 stage.")
+power = 75
+ap_cost = 2
+action_type = 1
+attack_type = 10
+action_effect = 11
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

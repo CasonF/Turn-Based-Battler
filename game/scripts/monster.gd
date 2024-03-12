@@ -3,6 +3,8 @@ extends Sprite2D
 
 @export var data : MonsterStats
 
+signal knocked_out(mon: Monster)
+
 func _ready() -> void:
 	if data:
 		texture = data.sprite
@@ -10,6 +12,18 @@ func _ready() -> void:
 @export_range(1, 100, 1) var level : int = 1
 var current_hp : int
 var armor : int
+var AP : int = 0
+
+var known_actions: Array[MonsterAction] = []
+#===============================================================================
+# Field Effects and Status
+#-------------------------------------------------------------------------------
+enum STATUSES {BURN, FREEZE, POISON}
+var active_statuses: Array[STATUSES] = []
+
+var has_sigil_sphere : bool = false
+
+var chain_lightning_counter : int = 0
 #===============================================================================
 # Get calc'd stats
 #-------------------------------------------------------------------------------
@@ -48,6 +62,9 @@ func take_damage(damage: int) -> void:
 			current_hp = 0
 		else:
 			current_hp -= remainder
+	
+	if current_hp <= 0:
+		knocked_out.emit(self)
 
 func heal(amount: int) -> void:
 	if (amount + current_hp) >= HP:
@@ -64,6 +81,12 @@ func gain_armor(amount: int) -> void:
 	else:
 		print(data.monster_name + " gained " + str(amount) + " armor!")
 		armor += amount
+
+func gain_AP(amount: int = 1) -> void:
+	if (amount + AP) >= 5:
+		AP = 5
+	else:
+		AP += amount
 
 func update_stat_stage(stat: STAT_STAGE, amount: int) -> void:
 	if stat == STAT_STAGE.ATK:
@@ -122,14 +145,23 @@ static func create(monster = GlobalVariables.MONSTERS.FRENCHKINGDOG, monster_lev
 	var stats: MonsterStats
 	if monster is String:
 		stats = load("res://game/resources/monster_stats/" + monster.to_snake_case() + ".tres")
+		mon.known_actions = stats.actions
+		mon.level = monster_level
 	elif monster is GlobalVariables.MONSTERS:
 		stats = load(GlobalVariables.MONSTER_DICT.get(monster))
+		mon.known_actions = stats.actions
+		mon.level = monster_level
+	elif monster is MonsterStats:
+		stats = monster
+		mon.known_actions = stats.actions
+		mon.level = monster_level
 	elif monster is Monster:
 		stats = monster.data
 		mon.level = monster.level
 		mon.current_hp = monster.current_hp
+		mon.active_statuses = monster.active_statuses
+		mon.known_actions = monster.known_actions
 	mon.data = stats
-	mon.level = monster_level
 	return mon
 
 func print_stats() -> void:

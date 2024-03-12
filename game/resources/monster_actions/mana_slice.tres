@@ -6,8 +6,11 @@
 script = ExtResource("1_w5lgp")
 action_name = "Mana Slice"
 priority = 0
+description = PackedStringArray("A blade of arcane energy slashes through the foe\'s mana pathways, reducing their resistance to magical attacks.\nLowers target MDEF by 1 stage.")
 power = 50
-ap_cost = 0
+ap_cost = 1
 action_type = 0
 attack_type = 4
-action_effect = 6
+action_effect = 8
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=3 format=3 uid="uid://calhx2lmhfqd2"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_n86l6"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="1_yiqxp"]
+
+[resource]
+script = ExtResource("1_n86l6")
+action_name = "Pin Needles"
+priority = 0
+description = PackedStringArray("The user shoots a flurry of needles at the opponent.\nThe user attacks with Sting 3-5 times.")
+power = 15
+ap_cost = 2
+action_type = 0
+attack_type = 3
+action_effect = 0
+multi_attack = true
+multi_attack_action = ExtResource("1_yiqxp")
+range = Array[int]([3, 3, 3, 3, 3, 4, 4, 4, 5, 5])

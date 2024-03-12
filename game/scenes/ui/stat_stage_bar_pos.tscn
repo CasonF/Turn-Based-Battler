@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cml8e22h78hn1"]
+
+[ext_resource type="Script" path="res://game/scripts/ui/battle_manager/stat_stage_bar.gd" id="1_64gty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6j40"]
+bg_color = Color(0.211765, 0.211765, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoye0"]
+bg_color = Color(0.25098, 0.65098, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vexuk"]
+bg_color = Color(0.211765, 0.211765, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uimmd"]
+bg_color = Color(0.843137, 0.239216, 0, 1)
+
+[node name="StatStageBarPos" type="ProgressBar"]
+anchors_preset = -1
+anchor_right = 0.156
+anchor_bottom = 0.042
+offset_right = 0.287994
+offset_bottom = -0.216002
+theme_override_styles/background = SubResource("StyleBoxFlat_j6j40")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uoye0")
+max_value = 3.0
+step = 1.0
+show_percentage = false
+script = ExtResource("1_64gty")
+
+[node name="StatStageBarNeg" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_bottom = 1.0
+theme_override_styles/background = SubResource("StyleBoxFlat_vexuk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uimmd")
+max_value = 3.0
+step = 1.0
+fill_mode = 1
+show_percentage = false

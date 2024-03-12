@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://b5qm1eyo42ebw"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_7js8j"]
+
+[resource]
+script = ExtResource("1_7js8j")
+action_name = "Ointment"
+priority = 0
+description = PackedStringArray("The user applies a healing salve to their body, curing themselves of freeze and burn.")
+power = 0
+ap_cost = 0
+action_type = 2
+attack_type = 0
+action_effect = 29
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

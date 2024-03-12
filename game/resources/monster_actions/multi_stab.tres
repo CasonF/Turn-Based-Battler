@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=3 format=3 uid="uid://duu0p31rbdcif"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_5hfjb"]
+[ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_i1n8t"]
+
+[resource]
+script = ExtResource("1_5hfjb")
+action_name = "Multi-Stab"
+priority = 0
+description = PackedStringArray("The user stabs at the foe multiple times.\nThe user attacks with Stab 2-3 times.")
+power = 40
+ap_cost = 3
+action_type = 0
+attack_type = 3
+action_effect = 0
+multi_attack = true
+multi_attack_action = ExtResource("1_i1n8t")
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 2, 3, 3])

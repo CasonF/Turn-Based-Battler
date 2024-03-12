@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn7ur1fgyw8xw"]
+[gd_scene load_steps=3 format=3 uid="uid://dn7ur1fgyw8xw"]
 
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="1_hi0a7"]
 [ext_resource type="Script" path="res://game/scripts/ui/battle_manager/monster_action_button.gd" id="1_mipe6"]
 
 [node name="MonsterActionButton" type="Button"]
@@ -8,5 +9,103 @@ anchor_right = 0.137
 anchor_bottom = 0.162
 offset_right = 0.175995
 offset_bottom = 0.0240021
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_hi0a7")
+theme_override_font_sizes/font_size = 24
 text = "Text"
 script = ExtResource("1_mipe6")
+
+[node name="ActionInfoPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 50
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -126.0
+offset_right = 43.0
+offset_bottom = -123.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ActionInfoPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.019
+anchor_right = 1.0
+anchor_bottom = 0.981
+offset_left = 0.0999994
+offset_top = -0.052
+offset_right = 1.0
+offset_bottom = 0.0519943
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+horizontal_scroll_mode = 0
+
+[node name="InfoDivider" type="VBoxContainer" parent="ActionInfoPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="Description" type="Label" parent="ActionInfoPanel/ScrollContainer/InfoDivider"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_hi0a7")
+theme_override_font_sizes/font_size = 18
+text = "Description: The user does x, y and z to ensure blah blah blah"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ActionType" type="Label" parent="ActionInfoPanel/ScrollContainer/InfoDivider"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_hi0a7")
+theme_override_font_sizes/font_size = 18
+text = "Action Type - Magical"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Power" type="Label" parent="ActionInfoPanel/ScrollContainer/InfoDivider"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.286275, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_hi0a7")
+theme_override_font_sizes/font_size = 18
+text = "Power - 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="APCost" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.771
+anchor_right = 0.994
+anchor_bottom = 0.99
+offset_left = 0.0520001
+offset_top = 0.0449982
+offset_right = -0.0519867
+offset_bottom = 0.0499954
+theme_override_colors/font_color = Color(0.87451, 0.682353, 0.219608, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_hi0a7")
+text = "Cost: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_mouse_exited"]
+[connection signal="mouse_entered" from="ActionInfoPanel" to="." method="info_mouse_entered"]
+[connection signal="mouse_exited" from="ActionInfoPanel" to="." method="info_mouse_exited"]

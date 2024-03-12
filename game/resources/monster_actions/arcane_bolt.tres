@@ -5,7 +5,12 @@
 [resource]
 script = ExtResource("1_j6leg")
 action_name = "Arcane Bolt"
+priority = 0
+description = PackedStringArray("A bright blue bolt of arcane magic bursts forth, striking the target.")
 power = 40
 ap_cost = 0
 action_type = 1
 attack_type = 4
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

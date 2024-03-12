@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bis8btyyouawy"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_844ps"]
+
+[resource]
+script = ExtResource("1_844ps")
+action_name = "Thrash"
+priority = 0
+description = PackedStringArray("The user runs at the foe, throwing around their weight and their limbs in a chaotic and dangerous way.")
+power = 100
+ap_cost = 2
+action_type = 0
+attack_type = 2
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

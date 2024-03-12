@@ -1,15 +1,29 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=6 format=3 uid="uid://beyk22cdqme7f"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=19 format=3 uid="uid://beyk22cdqme7f"]
 
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_tv2e8"]
 [ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_yil83"]
 [ext_resource type="Texture2D" uid="uid://bpokma24sq8xx" path="res://game/assets/Sprites (Battlers) 2x/20_minion_01_xx.png" id="2_04ect"]
 [ext_resource type="Resource" uid="uid://c320ntdhcjf1h" path="res://game/resources/monster_actions/barricade.tres" id="2_y8o3u"]
 [ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="3_ldl3u"]
+[ext_resource type="Resource" uid="uid://c0afxrend5wvl" path="res://game/resources/monster_actions/bomb.tres" id="4_exeq2"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="5_cykkw"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="6_c1g4l"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="7_0t8t8"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="8_mvpc0"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="9_ugc8k"]
+[ext_resource type="Resource" uid="uid://e3ecajo873ed" path="res://game/resources/monster_actions/lock_on.tres" id="10_cf4tf"]
+[ext_resource type="Resource" uid="uid://duu0p31rbdcif" path="res://game/resources/monster_actions/multi_stab.tres" id="11_8c8wd"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="12_1gicr"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="13_e6xv4"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="14_iwb1y"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="15_vfas2"]
+[ext_resource type="Resource" uid="uid://q8w4yxe4nb0k" path="res://game/resources/monster_actions/wide_slash.tres" id="16_xndb7"]
 
 [resource]
 script = ExtResource("1_tv2e8")
 monster_name = "Spear Bud"
 is_monster_leader = false
+default_direction_left = false
 sprite = ExtResource("2_04ect")
 hp = 65
 atk = 75
@@ -19,5 +33,6 @@ mdef = 45
 spd = 45
 xp_yield = 42
 growth_rate = 1
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_yil83"), ExtResource("2_y8o3u"), ExtResource("3_ldl3u")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_yil83"), ExtResource("2_y8o3u"), ExtResource("3_ldl3u"), ExtResource("4_exeq2")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_cykkw"), ExtResource("2_y8o3u"), ExtResource("6_c1g4l"), ExtResource("4_exeq2"), ExtResource("7_0t8t8"), ExtResource("8_mvpc0"), ExtResource("9_ugc8k"), ExtResource("10_cf4tf"), ExtResource("11_8c8wd"), ExtResource("12_1gicr"), ExtResource("13_e6xv4"), ExtResource("1_yil83"), ExtResource("14_iwb1y"), ExtResource("3_ldl3u"), ExtResource("15_vfas2"), ExtResource("16_xndb7")])
 y_offset = 0.0

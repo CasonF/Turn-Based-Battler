@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://wksoeflt2w33"]
+
+[ext_resource type="Texture2D" uid="uid://c55wodpkhfv0x" path="res://game/assets/Sprites (Battlers) 2x/01_minion_01_xx.png" id="1_s2hqm"]
+[ext_resource type="Script" path="res://game/scripts/ui/battle_setup/team_monster_select_btn.gd" id="1_t2ier"]
+[ext_resource type="Texture2D" uid="uid://dxbpiqdvlab55" path="res://game/assets/icons/i_redX.png" id="2_03oua"]
+[ext_resource type="Resource" uid="uid://x8ge5px0n4uu" path="res://game/resources/monster_stats/angryfin.tres" id="3_2u08k"]
+[ext_resource type="FontFile" uid="uid://mrfh3imykou7" path="res://game/assets/fonts/DungeonFont.ttf" id="3_c5xws"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhb0n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bu8bv"]
+bg_color = Color(1, 1, 1, 0.196078)
+
+[node name="TeamMonsterSelect" type="Button"]
+custom_minimum_size = Vector2(136, 101)
+offset_left = -68.0
+offset_top = -51.0
+offset_right = 68.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_s2hqm")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_t2ier")
+test_monster = ExtResource("3_2u08k")
+
+[node name="MonsterLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_c5xws")
+theme_override_font_sizes/font_size = 18
+text = "Test Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="RemoveFromPartySprite" type="Sprite2D" parent="."]
+position = Vector2(104, 0)
+texture = ExtResource("2_03oua")
+centered = false
+
+[node name="RemoveFromPartyBtn" type="Button" parent="RemoveFromPartySprite"]
+z_index = 5
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.875
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dhb0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bu8bv")
+disabled = true

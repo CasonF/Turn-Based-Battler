@@ -6,8 +6,11 @@
 script = ExtResource("1_d7olb")
 action_name = "Stab"
 priority = 0
-power = 45
-ap_cost = 0
+description = PackedStringArray("A sharp object pierces the target\'s defenses, making them more susceptible to further attacks.\nLowers target DEF by 1 stage.")
+power = 40
+ap_cost = 1
 action_type = 0
 attack_type = 3
-action_effect = 5
+action_effect = 7
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

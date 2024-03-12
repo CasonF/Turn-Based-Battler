@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=23 format=3 uid="uid://44uo0jyxnbnp"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_6qmk3"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="1_mmahu"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_8a3xx"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="3_60hy4"]
+[ext_resource type="Resource" uid="uid://diuic0vluwaiy" path="res://game/resources/monster_actions/mana_slice.tres" id="4_nxh1u"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="5_r4347"]
+[ext_resource type="Texture2D" uid="uid://c8tsrwqi0aobu" path="res://game/assets/Sprites (Battlers) 2x/64_boss_xx.png" id="6_fas02"]
+[ext_resource type="Resource" uid="uid://c8cfa81p6tdp7" path="res://game/resources/monster_actions/arcane_explosion.tres" id="6_t7xbl"]
+[ext_resource type="Resource" uid="uid://bnayrt1fqybtl" path="res://game/resources/monster_actions/chain_lightning.tres" id="7_qe76m"]
+[ext_resource type="Resource" uid="uid://crp0wcvi7fn28" path="res://game/resources/monster_actions/charge_beam.tres" id="8_gvdbp"]
+[ext_resource type="Resource" uid="uid://21rp0rgfq7sn" path="res://game/resources/monster_actions/draining_tendrils.tres" id="9_q1lh5"]
+[ext_resource type="Resource" uid="uid://b6604iy4wwiub" path="res://game/resources/monster_actions/fireball.tres" id="10_xexac"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="11_p5fhj"]
+[ext_resource type="Resource" uid="uid://y34i7dx4whpr" path="res://game/resources/monster_actions/magic_missile.tres" id="12_fn227"]
+[ext_resource type="Resource" uid="uid://brg0odd88hlsb" path="res://game/resources/monster_actions/mind_seal.tres" id="13_4d57p"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="14_hlee0"]
+[ext_resource type="Resource" uid="uid://bbyqkyxx27ghl" path="res://game/resources/monster_actions/shooting_star.tres" id="15_mucoj"]
+[ext_resource type="Resource" uid="uid://c16ohm5xa4utf" path="res://game/resources/monster_actions/sigil_sphere.tres" id="16_ewivt"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="17_mlgkc"]
+[ext_resource type="Resource" uid="uid://dvtywt12jqw4k" path="res://game/resources/monster_actions/snowstorm.tres" id="18_6wkqy"]
+[ext_resource type="Resource" uid="uid://whni487rpbmm" path="res://game/resources/monster_actions/supernova.tres" id="19_htfjj"]
+[ext_resource type="Resource" uid="uid://ckwx5vlwwhvt8" path="res://game/resources/monster_actions/tsunami.tres" id="20_b57wr"]
+
+[resource]
+script = ExtResource("1_6qmk3")
+monster_name = "Lich Lord"
+is_monster_leader = true
+default_direction_left = true
+sprite = ExtResource("6_fas02")
+hp = 65
+atk = 50
+def = 50
+matk = 160
+mdef = 125
+spd = 65
+xp_yield = 201
+growth_rate = 0
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_mmahu"), ExtResource("2_8a3xx"), ExtResource("3_60hy4"), ExtResource("4_nxh1u")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_r4347"), ExtResource("1_mmahu"), ExtResource("6_t7xbl"), ExtResource("7_qe76m"), ExtResource("8_gvdbp"), ExtResource("2_8a3xx"), ExtResource("9_q1lh5"), ExtResource("10_xexac"), ExtResource("11_p5fhj"), ExtResource("3_60hy4"), ExtResource("12_fn227"), ExtResource("13_4d57p"), ExtResource("14_hlee0"), ExtResource("15_mucoj"), ExtResource("16_ewivt"), ExtResource("17_mlgkc"), ExtResource("18_6wkqy"), ExtResource("19_htfjj"), ExtResource("20_b57wr")])
+y_offset = 0.0

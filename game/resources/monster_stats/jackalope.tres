@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=23 format=3 uid="uid://dbkh4kctxs2ao"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_ggokg"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="1_qbvg7"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="2_vfvnd"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="3_qranj"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="4_ijnb2"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="5_40he7"]
+[ext_resource type="Texture2D" uid="uid://bac2x805qsjpk" path="res://game/assets/Sprites (Battlers) 2x/57_boss_xx.png" id="6_52ai5"]
+[ext_resource type="Resource" uid="uid://cq6s5ae2qc6r7" path="res://game/resources/monster_actions/arcane_bolt.tres" id="6_86qi1"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="7_3r542"]
+[ext_resource type="Resource" uid="uid://colybaheufvat" path="res://game/resources/monster_actions/cleanse.tres" id="8_ygdr6"]
+[ext_resource type="Resource" uid="uid://bxg2hrfgvi5ie" path="res://game/resources/monster_actions/earthquake.tres" id="9_uf3jc"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="10_ycv2u"]
+[ext_resource type="Resource" uid="uid://b8tjjscg7lqd6" path="res://game/resources/monster_actions/meditate.tres" id="11_x004l"]
+[ext_resource type="Resource" uid="uid://brg0odd88hlsb" path="res://game/resources/monster_actions/mind_seal.tres" id="12_eq8ld"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="13_ni3q3"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="14_qctxs"]
+[ext_resource type="Resource" uid="uid://bbyqkyxx27ghl" path="res://game/resources/monster_actions/shooting_star.tres" id="15_1eblo"]
+[ext_resource type="Resource" uid="uid://c16ohm5xa4utf" path="res://game/resources/monster_actions/sigil_sphere.tres" id="16_jc4ha"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="17_64be4"]
+[ext_resource type="Resource" uid="uid://dvtywt12jqw4k" path="res://game/resources/monster_actions/snowstorm.tres" id="18_1i7n1"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="19_f7a11"]
+[ext_resource type="Resource" uid="uid://b36npoyl1o4p0" path="res://game/resources/monster_actions/wish.tres" id="20_8om2b"]
+
+[resource]
+script = ExtResource("1_ggokg")
+monster_name = "Jackalope"
+is_monster_leader = true
+default_direction_left = false
+sprite = ExtResource("6_52ai5")
+hp = 82
+atk = 55
+def = 82
+matk = 55
+mdef = 109
+spd = 127
+xp_yield = 168
+growth_rate = 2
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_qbvg7"), ExtResource("2_vfvnd"), ExtResource("3_qranj"), ExtResource("4_ijnb2")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_40he7"), ExtResource("6_86qi1"), ExtResource("1_qbvg7"), ExtResource("7_3r542"), ExtResource("8_ygdr6"), ExtResource("2_vfvnd"), ExtResource("9_uf3jc"), ExtResource("4_ijnb2"), ExtResource("10_ycv2u"), ExtResource("11_x004l"), ExtResource("12_eq8ld"), ExtResource("13_ni3q3"), ExtResource("3_qranj"), ExtResource("14_qctxs"), ExtResource("15_1eblo"), ExtResource("16_jc4ha"), ExtResource("17_64be4"), ExtResource("18_1i7n1"), ExtResource("19_f7a11"), ExtResource("20_8om2b")])
+y_offset = 0.0

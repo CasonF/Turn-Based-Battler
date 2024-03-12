@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=7 format=3 uid="uid://savf2pp1e4o8"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=15 format=3 uid="uid://savf2pp1e4o8"]
 
 [ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="1_2nw5a"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_o8a3s"]
@@ -6,11 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://cmh8j8it8fnuk" path="res://game/assets/Sprites (Battlers) 2x/47_minion_01_xx.png" id="2_utaqt"]
 [ext_resource type="Resource" uid="uid://bxg2hrfgvi5ie" path="res://game/resources/monster_actions/earthquake.tres" id="3_mm3aa"]
 [ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="4_0tjgw"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="5_gfnm4"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="6_bbuag"]
+[ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="7_xlkeo"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="8_1x0iq"]
+[ext_resource type="Resource" uid="uid://buhn7ft5bgrrm" path="res://game/resources/monster_actions/gust.tres" id="9_ocxsp"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="10_al110"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="11_u4p0l"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="12_fnsh6"]
 
 [resource]
 script = ExtResource("1_o8a3s")
 monster_name = "Sandy Calfdrake"
 is_monster_leader = false
+default_direction_left = true
 sprite = ExtResource("2_utaqt")
 hp = 105
 atk = 55
@@ -21,4 +30,5 @@ spd = 35
 xp_yield = 39
 growth_rate = 1
 actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_2nw5a"), ExtResource("2_ps1sc"), ExtResource("3_mm3aa"), ExtResource("4_0tjgw")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("4_0tjgw"), ExtResource("5_gfnm4"), ExtResource("6_bbuag"), ExtResource("7_xlkeo"), ExtResource("3_mm3aa"), ExtResource("8_1x0iq"), ExtResource("9_ocxsp"), ExtResource("2_ps1sc"), ExtResource("10_al110"), ExtResource("11_u4p0l"), ExtResource("1_2nw5a"), ExtResource("12_fnsh6")])
 y_offset = 0.0

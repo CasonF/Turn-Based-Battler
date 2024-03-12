@@ -1,14 +1,31 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://bhhxgwchxd48c"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=21 format=3 uid="uid://bhhxgwchxd48c"]
 
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_mlcan"]
 [ext_resource type="Resource" uid="uid://dj7an2cquynmd" path="res://game/resources/monster_actions/stab.tres" id="1_nn5hi"]
 [ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="2_2ks7l"]
 [ext_resource type="Texture2D" uid="uid://c1ind3yj3axav" path="res://game/assets/Sprites (Battlers) 2x/20_minion_02_xx.png" id="2_3s4va"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="3_unhik"]
+[ext_resource type="Resource" uid="uid://xlagbxcdjgpv" path="res://game/resources/monster_actions/theft.tres" id="4_gncat"]
+[ext_resource type="Resource" uid="uid://c5le5vpwwlh1k" path="res://game/resources/monster_actions/antidote.tres" id="5_0is0n"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="6_ce5tn"]
+[ext_resource type="Resource" uid="uid://c0afxrend5wvl" path="res://game/resources/monster_actions/bomb.tres" id="7_l3ysd"]
+[ext_resource type="Resource" uid="uid://d3fnw662yabbk" path="res://game/resources/monster_actions/fireworks.tres" id="8_mrtsa"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="9_kg5dt"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="10_no36f"]
+[ext_resource type="Resource" uid="uid://e3ecajo873ed" path="res://game/resources/monster_actions/lock_on.tres" id="11_42yv1"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="12_crkej"]
+[ext_resource type="Resource" uid="uid://duu0p31rbdcif" path="res://game/resources/monster_actions/multi_stab.tres" id="13_2gra0"]
+[ext_resource type="Resource" uid="uid://calhx2lmhfqd2" path="res://game/resources/monster_actions/pin_needles.tres" id="14_yfd6f"]
+[ext_resource type="Resource" uid="uid://bg1jqm0up5vp1" path="res://game/resources/monster_actions/slash.tres" id="15_wg1vy"]
+[ext_resource type="Resource" uid="uid://3eby30qh6j26" path="res://game/resources/monster_actions/snarl.tres" id="16_ets5v"]
+[ext_resource type="Resource" uid="uid://d00bdpqu7ek7j" path="res://game/resources/monster_actions/sting.tres" id="17_qmibe"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="18_j2wfj"]
 
 [resource]
 script = ExtResource("1_mlcan")
 monster_name = "Stabby Corgi"
 is_monster_leader = false
+default_direction_left = true
 sprite = ExtResource("2_3s4va")
 hp = 54
 atk = 88
@@ -18,5 +35,6 @@ mdef = 38
 spd = 68
 xp_yield = 35
 growth_rate = 2
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_nn5hi"), ExtResource("2_2ks7l")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_nn5hi"), ExtResource("2_2ks7l"), ExtResource("3_unhik"), ExtResource("4_gncat")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("2_2ks7l"), ExtResource("5_0is0n"), ExtResource("6_ce5tn"), ExtResource("7_l3ysd"), ExtResource("8_mrtsa"), ExtResource("9_kg5dt"), ExtResource("3_unhik"), ExtResource("10_no36f"), ExtResource("11_42yv1"), ExtResource("12_crkej"), ExtResource("13_2gra0"), ExtResource("14_yfd6f"), ExtResource("15_wg1vy"), ExtResource("16_ets5v"), ExtResource("1_nn5hi"), ExtResource("17_qmibe"), ExtResource("4_gncat"), ExtResource("18_j2wfj")])
 y_offset = 10.0

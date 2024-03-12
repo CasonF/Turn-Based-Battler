@@ -5,7 +5,12 @@
 [resource]
 script = ExtResource("1_boxu4")
 action_name = "Bite"
+priority = 0
+description = PackedStringArray("The user lunges at the enemy and clamps its jaws shut on it.")
 power = 40
 ap_cost = 0
 action_type = 0
 attack_type = 3
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

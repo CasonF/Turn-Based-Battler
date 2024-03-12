@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=16 format=3 uid="uid://drd54a1jtww5m"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_e38aq"]
+[ext_resource type="Resource" uid="uid://c5hpf63c3ch5k" path="res://game/resources/monster_actions/bite.tres" id="1_hr13o"]
+[ext_resource type="Resource" uid="uid://b36npoyl1o4p0" path="res://game/resources/monster_actions/wish.tres" id="2_ke6hj"]
+[ext_resource type="Resource" uid="uid://bbyqkyxx27ghl" path="res://game/resources/monster_actions/shooting_star.tres" id="3_jdmww"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="4_smudp"]
+[ext_resource type="Resource" uid="uid://colybaheufvat" path="res://game/resources/monster_actions/cleanse.tres" id="5_65tl2"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="6_02c86"]
+[ext_resource type="Texture2D" uid="uid://b3nlioligprs1" path="res://game/assets/Sprites (Battlers) 2x/57_minion_3_xx.png" id="6_73egx"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="7_0vqpk"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="8_aep2l"]
+[ext_resource type="Resource" uid="uid://c16ohm5xa4utf" path="res://game/resources/monster_actions/sigil_sphere.tres" id="9_87t3n"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="10_4l5tg"]
+[ext_resource type="Resource" uid="uid://3eby30qh6j26" path="res://game/resources/monster_actions/snarl.tres" id="11_gbykf"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="12_hdon2"]
+[ext_resource type="Resource" uid="uid://doyr4n2xokam4" path="res://game/resources/monster_actions/windrush.tres" id="13_xto5v"]
+
+[resource]
+script = ExtResource("1_e38aq")
+monster_name = "Jerry"
+is_monster_leader = false
+default_direction_left = false
+sprite = ExtResource("6_73egx")
+hp = 55
+atk = 55
+def = 65
+matk = 50
+mdef = 75
+spd = 105
+xp_yield = 55
+growth_rate = 2
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_hr13o"), ExtResource("2_ke6hj"), ExtResource("3_jdmww"), ExtResource("4_smudp")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("4_smudp"), ExtResource("1_hr13o"), ExtResource("5_65tl2"), ExtResource("6_02c86"), ExtResource("7_0vqpk"), ExtResource("8_aep2l"), ExtResource("3_jdmww"), ExtResource("9_87t3n"), ExtResource("10_4l5tg"), ExtResource("11_gbykf"), ExtResource("12_hdon2"), ExtResource("13_xto5v"), ExtResource("2_ke6hj")])
+y_offset = 0.0

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=22 format=3 uid="uid://tuq6q08hodrt"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_1xbll"]
+[ext_resource type="Resource" uid="uid://wuxciwncii8k" path="res://game/resources/monster_actions/water_gun.tres" id="1_jfbqx"]
+[ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="2_8val0"]
+[ext_resource type="Resource" uid="uid://bv21yyi0hmuvu" path="res://game/resources/monster_actions/cure.tres" id="3_t0q7g"]
+[ext_resource type="Resource" uid="uid://dvtywt12jqw4k" path="res://game/resources/monster_actions/snowstorm.tres" id="4_bbc5s"]
+[ext_resource type="Resource" uid="uid://d0u1likc4wr3y" path="res://game/resources/monster_actions/acid_spray.tres" id="5_6j61c"]
+[ext_resource type="Texture2D" uid="uid://dxwncm0p4t34m" path="res://game/assets/Sprites (Battlers) 2x/50_boss_xx.png" id="5_nfh28"]
+[ext_resource type="Resource" uid="uid://dqoe4km1xisqw" path="res://game/resources/monster_actions/agility.tres" id="6_cvesm"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="7_1kpk4"]
+[ext_resource type="Resource" uid="uid://bnayrt1fqybtl" path="res://game/resources/monster_actions/chain_lightning.tres" id="8_lxggf"]
+[ext_resource type="Resource" uid="uid://c7t1c3oj1lwj5" path="res://game/resources/monster_actions/curio.tres" id="9_k3kw5"]
+[ext_resource type="Resource" uid="uid://bwq4t8jxqora1" path="res://game/resources/monster_actions/glacial_crush.tres" id="10_nbgun"]
+[ext_resource type="Resource" uid="uid://cn15t6daicp37" path="res://game/resources/monster_actions/hurricane.tres" id="11_ycscw"]
+[ext_resource type="Resource" uid="uid://b8tjjscg7lqd6" path="res://game/resources/monster_actions/meditate.tres" id="12_ttqtb"]
+[ext_resource type="Resource" uid="uid://blhe1kksmxcr6" path="res://game/resources/monster_actions/misty_step.tres" id="13_t254l"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="14_exujw"]
+[ext_resource type="Resource" uid="uid://b5qm1eyo42ebw" path="res://game/resources/monster_actions/ointment.tres" id="15_cqlwh"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="16_b5y7h"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="17_4qpxl"]
+[ext_resource type="Resource" uid="uid://ckwx5vlwwhvt8" path="res://game/resources/monster_actions/tsunami.tres" id="18_5pmt2"]
+[ext_resource type="Resource" uid="uid://bs00iik120aq8" path="res://game/resources/monster_actions/water_whip.tres" id="19_1e248"]
+
+[resource]
+script = ExtResource("1_1xbll")
+monster_name = "Hydrus"
+is_monster_leader = true
+default_direction_left = false
+sprite = ExtResource("5_nfh28")
+hp = 85
+atk = 65
+def = 60
+matk = 110
+mdef = 130
+spd = 65
+xp_yield = 177
+growth_rate = 1
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_jfbqx"), ExtResource("2_8val0"), ExtResource("3_t0q7g"), ExtResource("4_bbc5s")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_6j61c"), ExtResource("6_cvesm"), ExtResource("7_1kpk4"), ExtResource("8_lxggf"), ExtResource("3_t0q7g"), ExtResource("9_k3kw5"), ExtResource("10_nbgun"), ExtResource("11_ycscw"), ExtResource("12_ttqtb"), ExtResource("13_t254l"), ExtResource("14_exujw"), ExtResource("15_cqlwh"), ExtResource("16_b5y7h"), ExtResource("2_8val0"), ExtResource("4_bbc5s"), ExtResource("17_4qpxl"), ExtResource("18_5pmt2"), ExtResource("1_jfbqx"), ExtResource("19_1e248")])
+y_offset = 0.0

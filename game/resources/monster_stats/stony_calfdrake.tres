@@ -1,14 +1,25 @@
-[gd_resource type="Resource" script_class="MonsterStats" load_steps=5 format=3 uid="uid://dpajq8vxdstxq"]
+[gd_resource type="Resource" script_class="MonsterStats" load_steps=15 format=3 uid="uid://dpajq8vxdstxq"]
 
 [ext_resource type="Resource" uid="uid://ckgf4qwvftdyl" path="res://game/resources/monster_actions/slam.tres" id="1_1cey1"]
 [ext_resource type="Script" path="res://game/scripts/resources/monster_stats.gd" id="1_3j0yk"]
 [ext_resource type="Texture2D" uid="uid://yywi2mwjxtuw" path="res://game/assets/Sprites (Battlers) 2x/47_minion_02_xx.png" id="2_14j7w"]
 [ext_resource type="Resource" uid="uid://bws0ilchvpl4c" path="res://game/resources/monster_actions/defend.tres" id="2_qomb5"]
+[ext_resource type="Resource" uid="uid://d0q0qdts71y16" path="res://game/resources/monster_actions/mud_ball.tres" id="3_nqpdt"]
+[ext_resource type="Resource" uid="uid://bbcv6jo5eieie" path="res://game/resources/monster_actions/growl.tres" id="4_l1cs7"]
+[ext_resource type="Resource" uid="uid://dyn8ytelmu0vi" path="res://game/resources/monster_actions/body_splash.tres" id="5_tnde2"]
+[ext_resource type="Resource" uid="uid://cub22uvvu3k1f" path="res://game/resources/monster_actions/bulk_up.tres" id="6_sybs5"]
+[ext_resource type="Resource" uid="uid://bxg2hrfgvi5ie" path="res://game/resources/monster_actions/earthquake.tres" id="7_aqdhj"]
+[ext_resource type="Resource" uid="uid://bkti1q5gxmeuk" path="res://game/resources/monster_actions/glare.tres" id="8_adxgg"]
+[ext_resource type="Resource" uid="uid://bw2ip6bjsyyb7" path="res://game/resources/monster_actions/leer.tres" id="9_gomlb"]
+[ext_resource type="Resource" uid="uid://bb0ggvnq2mu84" path="res://game/resources/monster_actions/reversal.tres" id="10_sq4bl"]
+[ext_resource type="Resource" uid="uid://cr2jygxrf412a" path="res://game/resources/monster_actions/tackle.tres" id="11_md7rv"]
+[ext_resource type="Resource" uid="uid://bis8btyyouawy" path="res://game/resources/monster_actions/thrash.tres" id="12_4bs7i"]
 
 [resource]
 script = ExtResource("1_3j0yk")
 monster_name = "Stony Calfdrake"
 is_monster_leader = false
+default_direction_left = true
 sprite = ExtResource("2_14j7w")
 hp = 110
 atk = 70
@@ -18,5 +29,6 @@ mdef = 65
 spd = 15
 xp_yield = 43
 growth_rate = 1
-actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_1cey1"), ExtResource("2_qomb5")])
+actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("1_1cey1"), ExtResource("2_qomb5"), ExtResource("3_nqpdt"), ExtResource("4_l1cs7")])
+knowable_actions = Array[Resource("res://game/scripts/resources/monster_action.gd")]([ExtResource("5_tnde2"), ExtResource("6_sybs5"), ExtResource("2_qomb5"), ExtResource("7_aqdhj"), ExtResource("8_adxgg"), ExtResource("4_l1cs7"), ExtResource("9_gomlb"), ExtResource("3_nqpdt"), ExtResource("10_sq4bl"), ExtResource("1_1cey1"), ExtResource("11_md7rv"), ExtResource("12_4bs7i")])
 y_offset = 0.0

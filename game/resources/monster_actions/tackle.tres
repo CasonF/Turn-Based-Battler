@@ -5,7 +5,12 @@
 [resource]
 script = ExtResource("1_5urai")
 action_name = "Tackle"
+priority = 0
+description = PackedStringArray("The user charges at the foe to deal damage.")
 power = 50
 ap_cost = 0
 action_type = 0
 attack_type = 2
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

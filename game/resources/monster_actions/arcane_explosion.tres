@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c8cfa81p6tdp7"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_uyhvc"]
+
+[resource]
+script = ExtResource("1_uyhvc")
+action_name = "Arcane Explosion"
+priority = 0
+description = PackedStringArray("All of the stored arcane energy within the user is unleashed all at once, dealing a great amount of damage but alos reducing their power.\nLowers user MATK by 2 stages.\n")
+power = 120
+ap_cost = 2
+action_type = 1
+attack_type = 4
+action_effect = 18
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

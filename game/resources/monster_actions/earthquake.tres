@@ -6,7 +6,11 @@
 script = ExtResource("1_kyr0w")
 action_name = "Earthquake"
 priority = 0
+description = PackedStringArray("The ground quakes beneath the opponent, tossing them around and falling from beneath them.")
 power = 100
 ap_cost = 3
 action_type = 0
 attack_type = 9
+action_effect = 0
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

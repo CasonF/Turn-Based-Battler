@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://bw2ip6bjsyyb7"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_l07fs"]
+
+[resource]
+script = ExtResource("1_l07fs")
+action_name = "Leer"
+priority = 0
+description = PackedStringArray("The user leers meanly at the opponent, causing them to cower and lower their defenses.\nLowers target DEF by 1 stage.")
+power = 0
+ap_cost = 0
+action_type = 3
+attack_type = 0
+action_effect = 7
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

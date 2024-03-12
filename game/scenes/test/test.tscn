@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://3m4y8wvhdefy"]
+
+[ext_resource type="PackedScene" uid="uid://wksoeflt2w33" path="res://game/scenes/ui/team_monster_select.tscn" id="1_y86b5"]
+[ext_resource type="Resource" uid="uid://oyraiqh20bep" path="res://game/resources/monster_stats/apostlich.tres" id="2_lunhb"]
+
+[node name="Test" type="Node"]
+
+[node name="TeamMonsterSelect" parent="." instance=ExtResource("1_y86b5")]
+offset_left = 216.0
+offset_top = 73.0
+offset_right = 352.0
+offset_bottom = 174.0
+
+[node name="TeamMonsterSelect2" parent="." instance=ExtResource("1_y86b5")]
+offset_left = 360.0
+offset_top = 73.0
+offset_right = 496.0
+offset_bottom = 174.0
+icon = null
+test_monster = ExtResource("2_lunhb")

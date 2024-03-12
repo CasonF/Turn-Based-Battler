@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://whni487rpbmm"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_qekci"]
+
+[resource]
+script = ExtResource("1_qekci")
+action_name = "Supernova"
+priority = 0
+description = PackedStringArray("The user explodes in a burst of fire and stardust, knocking out the user and burning all remaining monsters with HP.")
+power = 200
+ap_cost = 5
+action_type = 1
+attack_type = 5
+action_effect = 34
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])

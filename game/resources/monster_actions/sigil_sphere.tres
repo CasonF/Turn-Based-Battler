@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MonsterAction" load_steps=2 format=3 uid="uid://c16ohm5xa4utf"]
+
+[ext_resource type="Script" path="res://game/scripts/resources/monster_action.gd" id="1_mfiw1"]
+
+[resource]
+script = ExtResource("1_mfiw1")
+action_name = "Sigil Sphere"
+priority = 10
+description = PackedStringArray("A magical sphere of stars and sigils surround the user, protecting them from harm.\nReduces incoming Magical damage by 90% this turn.\nReduces incoming Physical damage by 30% this turn.\nAlways goes first.")
+power = 0
+ap_cost = 1
+action_type = 3
+attack_type = 0
+action_effect = 14
+multi_attack = false
+range = Array[int]([2, 2, 2, 2, 2, 2, 2, 3, 3, 3])
